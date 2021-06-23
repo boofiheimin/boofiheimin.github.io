@@ -1,20 +1,74 @@
-body,
-html {
-  margin: 0;
-  text-align: center;
-  background-color: lightblue;
+html,
+body {
+  background-color: lightblue !important;
+  padding: 2rem;
 }
 
-.App {
-  padding-top: 2rem;
+.main_container {
+  max-width: 700px;
 }
 
-.site-card-border-less-wrapper {
-  padding: 30px;
-  background: #ececec;
+.congrats_card {
+  background: white;
+  border: 3px;
+  border-radius: 24px 24px 24px 24px;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
-.main-container {
-  text-align: center;
-  background-color: whitesmoke;
+.congrats_card_header {
+  width: 100%;
+}
+
+.congrats_card_message {
+  padding: 1rem 0;
+}
+
+.ppt_card {
+  background: white;
+  border: 3px;
+  border-radius: 24px 24px 24px 24px;
+  height: 565px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.shuriken {
+  animation: loading 1s ease infinite;
+  width: 128px;
+  height: 128px;
+  position: absolute !important;
+  z-index: 10;
+}
+
+@keyframes loading {
+  /* Safari support */
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 10px;
 }

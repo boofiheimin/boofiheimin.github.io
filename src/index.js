@@ -3,6 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import "semantic-ui-less/semantic.less";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+AOS.init();
 
 ReactDOM.render(
   <React.StrictMode>
