@@ -18,10 +18,10 @@ class PPTFrame extends Component {
       <Container className={"ppt_card"} fluid>
         {this.state.loading ? <ShurikenSpinner /> : null}
         <iframe
-          title="PTT"
-          src="https://onedrive.live.com/embed?cid=9C12431F4CA33E8E&amp;resid=9C12431F4CA33E8E%2129324&amp;authkey=AFLMoLDUu5SIfFw&amp;em=2&amp;wdAr=1.7777777777777777"
+          title="PPT"
+          src="https://onedrive.live.com/embed?cid=9C12431F4CA33E8E&amp;resid=9C12431F4CA33E8E%2129326&amp;authkey=AE5OmX5CpHbITUU&amp;em=2&amp;wdAr=1.7777777777777777"
           width="100%"
-          height="565px"
+          height="100%"
           frameborder="0"
           onLoad={this.hideSpinner}
         >

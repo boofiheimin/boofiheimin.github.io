@@ -1,11 +1,13 @@
 html,
 body {
-  background-color: lightblue !important;
-  padding: 2rem;
+  background-image: url("./images/pptile.png") !important;
+  background-size: 150px !important;
+  background-repeat: repeat !important;
 }
 
 .main_container {
   max-width: 700px;
+  padding-top: 2rem;
 }
 
 .congrats_card {
@@ -24,6 +26,28 @@ body {
   padding: 1rem 0;
 }
 
+.download_container {
+  display: flex !important;
+  justify-content: center;
+  max-height: 200px;
+  width: 600px;
+  margin-bottom: 2rem;
+}
+
+.download_button {
+  cursor: pointer;
+}
+
+.download_button:hover {
+  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+  transform: scale(1.03);
+}
+
+.download_button:active {
+  box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+  transform: scale(0.98);
+}
+
 .ppt_card {
   background: white;
   border: 3px;
@@ -36,10 +60,24 @@ body {
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 738px) {
+  /* For mobile phones: */
+  .ppt_card {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  /* For mobile phones: */
+  .ppt_card {
+    height: 200px;
+  }
+}
+
 .shuriken {
   animation: loading 1s ease infinite;
-  width: 128px;
-  height: 128px;
+  width: 64px;
+  height: 64px;
   position: absolute !important;
   z-index: 10;
 }
@@ -71,4 +109,20 @@ body {
 .my-masonry-grid_column > div {
   /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 10px;
+}
+
+.message_board {
+  padding-bottom: 3rem;
+}
+
+.messageboardLoader {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.footer {
+  padding: 3rem;
 }
