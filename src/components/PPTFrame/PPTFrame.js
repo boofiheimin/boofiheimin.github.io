@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import { Element } from "react-scroll";
 import { Icon } from "semantic-ui-react";
 import ShurikenSpinner from "../ShurikenSpinner";
 

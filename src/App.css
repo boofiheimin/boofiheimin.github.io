@@ -84,6 +84,13 @@ body {
 
 .congrats_buttons {
   padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.congrats_buttons > button {
+  margin-left: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .congrats_card_more {
@@ -172,33 +179,48 @@ body {
   flex-direction: column;
 }
 
-@media only screen and (max-width: 1300px) {
-  .ppt_frame {
-    height: 50%;
-  }
-}
-
 @media only screen and (max-width: 1100px) {
   .congrats_card_message_container {
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 0 1rem !important;
+    padding: 0 6rem !important;
+  }
+  .congrats_card_message {
+    font-size: 4rem;
   }
   .ppt_frame {
-    width: 720px;
+    display: none;
+  }
+  .download_container {
+    width: 100%;
+    aspect-ratio: auto;
+    padding: 0 4vw;
+    text-align: right;
+    color: white;
+  }
+  .download_description_title {
+    font-size: 7rem;
+  }
+  .download_description_subtitle {
+    font-size: 2rem;
+  }
+  .download_button {
+    font-size: 3rem !important;
+    padding: 1.5rem 1.5rem !important;
+  }
+
+  .download_icon {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+  .download_button_description {
+    font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .ppt_frame {
-    width: 600px;
-  }
-  .ppt_card {
-    height: 630px;
-  }
   .download_button {
     font-size: 2rem !important;
     padding: 1rem 2rem !important;
@@ -208,18 +230,71 @@ body {
   }
 }
 
+@media only screen and (max-width: 647px) {
+  .download_description_title {
+    font-size: 5rem;
+  }
+  .download_description_subtitle {
+    font-size: 1.5rem;
+  }
+  .download_button {
+    font-size: 2rem !important;
+  }
+
+  .download_icon {
+    width: 2rem;
+  }
+  .download_button_description {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 420px) {
-  .ppt_frame {
-    width: 300px;
+  .congrats_card_message_container {
+    padding: 0 2rem !important;
   }
-  .ppt_card {
-    height: 418px;
+  .congrats_description {
+    font-size: 1rem !important;
   }
+
   .congrats_card_message {
     font-size: 2.75rem;
   }
   .congrats_card_submessage {
     font-size: 1rem !important;
+  }
+
+  .download_container {
+    text-align: center;
+  }
+
+  .download_description {
+    margin-bottom: 3vh;
+  }
+
+  .download_description_title {
+    font-size: 4rem;
+  }
+  .download_description_subtitle {
+    font-size: rem;
+  }
+  .download_button {
+    font-size: 2rem !important;
+  }
+
+  .download_icon {
+    width: 2rem;
+  }
+  .download_button_description {
+    font-size: 1rem;
+  }
+
+  .download_button_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: none;
   }
 }
 
@@ -296,4 +371,17 @@ body {
   width: 40px;
   right: -11px;
   filter: drop-shadow(2px 2px 1px darkgray);
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 500;
+  box-shadow: 0px 0px 15px 5px darkgray;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
