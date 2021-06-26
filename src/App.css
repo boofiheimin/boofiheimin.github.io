@@ -10,6 +10,25 @@ body {
   padding-top: 2rem;
 }
 
+.shuriken {
+  animation: loading 1s ease infinite;
+  width: 64px;
+  height: 64px;
+  position: absolute !important;
+  z-index: 10;
+}
+
+@keyframes loading {
+  /* Safari support */
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .congrats_card {
   background: white;
   border: 3px;
@@ -36,11 +55,23 @@ body {
 
 .download_button {
   cursor: pointer;
+  font-size: 4rem !important;
+  display: flex !important;
+  padding: 2rem 4rem !important;
+}
+
+.download_icon {
+  width: 4rem;
+  margin-right: 1rem;
 }
 
 .download_button:hover {
   box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
   transform: scale(1.03);
+}
+
+.download_button:hover img {
+  animation: loading 1s ease infinite;
 }
 
 .download_button:active {
@@ -71,25 +102,6 @@ body {
   /* For mobile phones: */
   .ppt_card {
     height: 200px;
-  }
-}
-
-.shuriken {
-  animation: loading 1s ease infinite;
-  width: 64px;
-  height: 64px;
-  position: absolute !important;
-  z-index: 10;
-}
-
-@keyframes loading {
-  /* Safari support */
-  from {
-    transform: rotate(0turn);
-  }
-
-  to {
-    transform: rotate(1turn);
   }
 }
 
@@ -125,4 +137,18 @@ body {
 
 .footer {
   padding: 3rem;
+}
+
+.message_card {
+  position: relative !important;
+  margin-top: 15px !important;
+}
+
+.message_card_icon {
+  position: absolute !important;
+  z-index: 100;
+  top: -14px;
+  width: 40px;
+  right: -11px;
+  filter: drop-shadow(2px 2px 1px darkgray);
 }

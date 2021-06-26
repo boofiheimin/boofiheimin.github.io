@@ -2,10 +2,14 @@ import { Divider, Image, Card } from "semantic-ui-react";
 
 import Masonry from "react-masonry-css";
 
+const modSeq = (a, b) => {
+  return (a % b) + 1;
+};
+
 const MessageItems = ({ data, size }) => {
   const breakpoints = {
     default: 3,
-    1100: 2,
+    1200: 2,
     700: 1,
   };
   return (
@@ -15,14 +19,21 @@ const MessageItems = ({ data, size }) => {
       columnClassName="my-masonry-grid_column"
     >
       {data.map(({ message, user, image }, i) => (
-        <Card key={i} centered data-aos="fade-up">
-          {image && <Image src={image} wrapped ui={false} />}
-          <Card.Content>
-            <Card.Description>{message}</Card.Description>
-            <Divider />
-            <Card.Header>{user}</Card.Header>
-          </Card.Content>
-        </Card>
+        <div data-aos="fade-up">
+          <Card className={"message_card"} key={i} centered>
+            <img
+              alt="icon"
+              className={"message_card_icon"}
+              src={`/icon/pp_${modSeq(i, 10)}.png`}
+            />
+            {image && <Image src={image} wrapped ui={false} />}
+            <Card.Content>
+              <Card.Description>{message}</Card.Description>
+              <Divider />
+              <Card.Header>{user}</Card.Header>
+            </Card.Content>
+          </Card>
+        </div>
       ))}
     </Masonry>
   );

@@ -78,7 +78,7 @@ class MessageBoard extends Component {
   render = () => {
     const { data, hasMore } = this.state;
     return (
-      <Container className="message_board">
+      <div className="message_board">
         <Container className={"congrats_card"} fluid>
           <Header textAlign="center">
             <Header.Content as="h1" className={"congrats_card_message"}>
@@ -109,7 +109,7 @@ class MessageBoard extends Component {
         >
           <MessageItems data={data} />
         </InfiniteScroll>
-      </Container>
+      </div>
     );
   };
 }
