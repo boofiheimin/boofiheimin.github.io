@@ -30,7 +30,7 @@ const MessageItems = ({ data, size }) => {
             <Card.Content>
               <Card.Description>{message}</Card.Description>
               <Divider />
-              <Card.Header>{user}</Card.Header>
+              <Card.Header textAlign="right">{user}</Card.Header>
             </Card.Content>
           </Card>
         </div>

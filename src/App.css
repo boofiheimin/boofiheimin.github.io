@@ -54,10 +54,10 @@ body {
 }
 
 .download_button {
-  cursor: pointer;
   font-size: 4rem !important;
   display: flex !important;
   padding: 2rem 4rem !important;
+  margin: 0 !important;
 }
 
 .download_icon {
@@ -92,16 +92,31 @@ body {
 }
 
 @media only screen and (max-width: 738px) {
-  /* For mobile phones: */
   .ppt_card {
     height: 300px;
+  }
+  .download_button {
+    font-size: 2rem !important;
+    padding: 1rem 2rem !important;
+  }
+  .download_icon {
+    width: 2rem;
   }
 }
 
 @media only screen and (max-width: 420px) {
-  /* For mobile phones: */
   .ppt_card {
     height: 200px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .download_button {
+    font-size: 1.75rem !important;
+    padding: 1rem 1rem !important;
+  }
+  .download_icon {
+    width: 1.75rem;
   }
 }
 
