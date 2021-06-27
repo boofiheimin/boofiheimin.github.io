@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Container, Header, Divider } from "semantic-ui-react";
 import MessageItems from "./MessageItems";
 
@@ -6,16 +6,15 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import ShurikenSpinner from "../ShurikenSpinner";
+import { isMobile } from "react-device-detect";
 
-const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
-const SHEET_ID = process.env.REACT_APP_SHEET_ID;
-const CLIENT_EMAIL = process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL;
-const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_PRIVATE_KEY.replace(
-  /\\n/g,
-  "\n"
-);
-
-const LIMIT = parseInt(process.env.REACT_APP_MESSAGE_LIMIT, 10);
+import {
+  SPREADSHEET_ID,
+  SHEET_ID,
+  CLIENT_EMAIL,
+  PRIVATE_KEY,
+  LIMIT,
+} from "../../constants";
 
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
@@ -25,6 +24,8 @@ class MessageBoard extends Component {
     offset: 0,
     hasMore: true,
   };
+
+  messageRef = React.createRef();
 
   setData = (data) => {
     this.setState({
@@ -45,6 +46,11 @@ class MessageBoard extends Component {
   };
 
   componentDidMount = async () => {
+    if (isMobile) {
+      const DOMNode = this.messageRef.current;
+      DOMNode.style.backgroundAttachment = "scroll";
+    }
+
     await doc.useServiceAccountAuth({
       client_email: CLIENT_EMAIL,
       private_key: PRIVATE_KEY,
@@ -58,7 +64,6 @@ class MessageBoard extends Component {
   };
 
   fetchMore = async () => {
-    console.log("fetchMore");
     if (this.state.data.length % LIMIT !== 0) {
       this.setHasMore(false);
     }
@@ -78,7 +83,7 @@ class MessageBoard extends Component {
   render = () => {
     const { data, hasMore } = this.state;
     return (
-      <div className="message_board_wrapper">
+      <div className="message_board_wrapper" ref={this.messageRef}>
         <Container className="message_board">
           <Container className={"message_board_header"}>
             <Header textAlign="center">

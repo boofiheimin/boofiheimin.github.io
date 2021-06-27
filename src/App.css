@@ -1,8 +1,7 @@
 html,
 body {
-  /* background-image: url("./images/pptile.png") !important;
-  background-size: 150px !important;
-  background-repeat: repeat !important; */
+  scroll-behavior: smooth;
+  font-family: "M PLUS 1p" !important;
 }
 
 .shuriken {
@@ -78,7 +77,7 @@ body {
 .congrats_description {
   font-size: 1.5rem;
   color: white;
-  max-height: 40vh;
+  max-height: 25vh;
   overflow-y: auto;
 }
 
@@ -89,8 +88,10 @@ body {
 }
 
 .congrats_buttons > button {
-  margin-left: 1rem !important;
-  margin-bottom: 1rem !important;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.1rem 1.4rem;
 }
 
 .congrats_card_more {
@@ -108,10 +109,14 @@ body {
   padding: 0 4vw;
   aspect-ratio: 16/9;
   text-align: right;
-  color: white;
+}
+
+#desc_top {
+  display: none;
 }
 
 .download_description {
+  color: white;
   margin-bottom: 2vw;
 }
 
@@ -120,7 +125,7 @@ body {
   font-size: 5rem;
 }
 .download_description_subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .download_button_container {
@@ -128,10 +133,16 @@ body {
 }
 
 .download_button {
-  font-size: 2rem !important;
-  display: flex !important;
-  padding: 1rem 1rem !important;
-  margin: 0 !important;
+  float: right;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download_button_description {
+  color: white;
 }
 
 .download_icon {
@@ -139,29 +150,15 @@ body {
   margin-right: 1rem;
 }
 
-.download_button:hover {
-  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
-  transform: scale(1.03);
-}
-
-.download_button:hover img {
-  animation: loading 1s ease infinite;
-}
-
-.download_button:active {
-  box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
-  transform: scale(0.98);
-}
-
 .ppt_card {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-  background-image: url("./images/ppstage.png") !important;
+  background-image: url("./images/ppstage_blur.png") !important;
   background-repeat: no-repeat !important;
   background-size: cover;
   background-position: center;
@@ -177,135 +174,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-@media only screen and (max-width: 1100px) {
-  .congrats_card_message_container {
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 6rem !important;
-  }
-  .congrats_card_message {
-    font-size: 4rem;
-  }
-  .ppt_frame {
-    display: none;
-  }
-  .download_container {
-    width: 100%;
-    aspect-ratio: auto;
-    padding: 0 4vw;
-    text-align: right;
-    color: white;
-  }
-  .download_description_title {
-    font-size: 7rem;
-  }
-  .download_description_subtitle {
-    font-size: 2rem;
-  }
-  .download_button {
-    font-size: 3rem !important;
-    padding: 1.5rem 1.5rem !important;
-  }
-
-  .download_icon {
-    width: 3rem;
-    margin-right: 1rem;
-  }
-  .download_button_description {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .download_button {
-    font-size: 2rem !important;
-    padding: 1rem 2rem !important;
-  }
-  .download_icon {
-    width: 2rem;
-  }
-}
-
-@media only screen and (max-width: 647px) {
-  .download_description_title {
-    font-size: 5rem;
-  }
-  .download_description_subtitle {
-    font-size: 1.5rem;
-  }
-  .download_button {
-    font-size: 2rem !important;
-  }
-
-  .download_icon {
-    width: 2rem;
-  }
-  .download_button_description {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .congrats_card_message_container {
-    padding: 0 2rem !important;
-  }
-  .congrats_description {
-    font-size: 1rem !important;
-  }
-
-  .congrats_card_message {
-    font-size: 2.75rem;
-  }
-  .congrats_card_submessage {
-    font-size: 1rem !important;
-  }
-
-  .download_container {
-    text-align: center;
-  }
-
-  .download_description {
-    margin-bottom: 3vh;
-  }
-
-  .download_description_title {
-    font-size: 4rem;
-  }
-  .download_description_subtitle {
-    font-size: rem;
-  }
-  .download_button {
-    font-size: 2rem !important;
-  }
-
-  .download_icon {
-    width: 2rem;
-  }
-  .download_button_description {
-    font-size: 1rem;
-  }
-
-  .download_button_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    float: none;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .download_button {
-    font-size: 1.75rem !important;
-    padding: 1rem 1rem !important;
-  }
-  .download_icon {
-    width: 1.75rem;
-  }
 }
 
 .my-masonry-grid {
@@ -333,12 +201,15 @@ body {
   padding: 1rem;
 }
 
+.message_board_text {
+  font-weight: 900;
+}
+
 .message_board_wrapper {
   background-image: url("./images/pptile.png") !important;
   background-attachment: fixed;
   background-size: 150px !important;
   background-repeat: repeat !important;
-
   padding-top: 2rem;
 }
 
@@ -373,15 +244,159 @@ body {
   filter: drop-shadow(2px 2px 1px darkgray);
 }
 
-#myBtn {
+.back_to_top {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 500;
-  box-shadow: 0px 0px 15px 5px darkgray;
+  box-shadow: 0px 0px 12px 2px grey;
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.33;
+  border-radius: 25px;
 }
 
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+.spinning_shuriken img {
+  animation: loading 1s infinite;
+  animation-iteration-count: 1;
+}
+
+@media only screen and (max-width: 1100px) {
+  .congrats_card_message_container {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 6rem;
+  }
+  .congrats_card_message {
+    font-size: 4rem;
+  }
+
+  .ppt_card {
+    padding: 4rem 6rem;
+  }
+
+  .ppt_frame {
+    width: 100%;
+  }
+
+  .download_container {
+    width: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .download_button_container {
+    float: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .download_button {
+    float: none;
+  }
+
+  #desc_top {
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  #desc_bottom {
+    display: none;
+  }
+
+  .download_description_title {
+    font-size: 4rem;
+  }
+  .download_description_subtitle {
+    font-size: 1.5rem;
+  }
+
+  .download_icon {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+  .download_button_description {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #desc_top {
+    margin-top: 1rem;
+  }
+  .download_button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+  .download_icon {
+    width: 2rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .congrats_card_message_container {
+    padding: 0 2rem !important;
+  }
+  .congrats_description {
+    font-size: 1rem !important;
+  }
+
+  .congrats_card_message {
+    font-size: 2.75rem;
+  }
+  .congrats_card_submessage {
+    font-size: 1rem !important;
+  }
+
+  .ppt_card {
+    padding: 5rem 2rem;
+  }
+
+  .download_container {
+    padding-bottom: 5rem;
+  }
+
+  .download_description_title {
+    font-size: 2.75rem;
+  }
+  .download_description_subtitle {
+    font-size: 1rem;
+  }
+
+  .download_button {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
+  .download_icon {
+    width: 1.5rem;
+  }
+  .download_button_description {
+    font-size: 1rem;
+  }
+
+  .congrats_card_more {
+    font-size: 1.5rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .download_button:hover .download_icon {
+    animation: loading 1s infinite;
+  }
+}
+
+@media (hover: none) {
+  .download_icon {
+    transition-duration: 2s;
+  }
 }

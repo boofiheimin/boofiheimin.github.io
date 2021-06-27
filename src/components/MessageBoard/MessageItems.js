@@ -19,8 +19,8 @@ const MessageItems = ({ data, size }) => {
       columnClassName="my-masonry-grid_column"
     >
       {data.map(({ message, user, image }, i) => (
-        <div data-aos="fade-up">
-          <Card className={"message_card"} key={i} centered>
+        <div data-aos="fade-up" key={i}>
+          <Card className={"message_card"} centered>
             <img
               alt="icon"
               className={"message_card_icon"}
