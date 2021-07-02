@@ -1,11 +1,15 @@
+import styled from "styled-components";
 import { Container } from "semantic-ui-react";
 
-const Footer = () => {
+import parse from "html-react-parser";
+
+const FooterContainer = styled(Container)`
+  padding: 3rem;
+`;
+
+const Footer = ({ t }) => {
   return (
-    <Container className="footer" textAlign="center">
-      Power is power. Gorilla is the angel. Violence is the solution to
-      everything.
-    </Container>
+    <FooterContainer textAlign="center">{parse(t("footer"))}</FooterContainer>
   );
 };
 

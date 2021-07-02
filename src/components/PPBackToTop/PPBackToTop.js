@@ -1,51 +1,35 @@
-import React, { Component } from "react";
-
+import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 
 import PPButton from "../PPButton";
 
-class PPBackToTop extends Component {
-  bttRef = React.createRef();
+const BackToTopButton = styled(PPButton)`
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 500;
+  box-shadow: 0px 0px 12px 2px grey;
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.33;
+  border-radius: 25px;
+`;
 
-  componentDidMount = () => {
-    const DOMNode = this.bttRef.current;
-    window.onscroll = () => {
-      this.scrollToAppear(DOMNode);
-    };
-  };
-
-  scrollToAppear(mybutton) {
-    if (mybutton) {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-  }
-
-  returnToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  render = () => {
-    return (
-      <PPButton
-        onClick={() => this.returnToTop()}
-        circular={true}
-        className="back_to_top"
-        color="white"
-        backgroundColor="lightgrey"
-        ref={this.bttRef}
-      >
-        <Icon name="chevron up" fitted />
-      </PPButton>
-    );
-  };
-}
+const PPBackToTop = ({ returnToTop, bttRef }) => {
+  return (
+    <BackToTopButton
+      onClick={returnToTop}
+      circular={true}
+      color="white"
+      backgroundColor="lightgrey"
+      ref={bttRef}
+    >
+      <Icon name="chevron up" fitted />
+    </BackToTopButton>
+  );
+};
 
 export default PPBackToTop;

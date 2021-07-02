@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { Modal } from "react-bootstrap";
 import { Divider } from "semantic-ui-react";
 import parse from "html-react-parser";
@@ -5,6 +6,19 @@ import parse from "html-react-parser";
 import PPButton from "../../../PPButton";
 
 import { COLOR } from "../../../../constants";
+
+const CreditButton = styled(PPButton)`
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px black;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+`;
+
+const CreditCloseButton = styled(PPButton)`
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+`;
 
 const CenteredModal = (props) => {
   const { t, ...restProps } = props;
@@ -35,7 +49,7 @@ const CenteredModal = (props) => {
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <PPButton
+        <CreditCloseButton
           className="credit_close_button"
           backgroundColor={COLOR.png}
           hoveredBackgroundColor={COLOR.pngHovered}
@@ -43,7 +57,7 @@ const CenteredModal = (props) => {
           onClick={props.onHide}
         >
           Close
-        </PPButton>
+        </CreditCloseButton>
       </Modal.Footer>
     </Modal>
   );
@@ -52,15 +66,14 @@ const CenteredModal = (props) => {
 const CreditModal = ({ t, modalShow, modalOnClick }) => {
   return (
     <>
-      <PPButton
-        className="credit_button"
+      <CreditButton
         backgroundColor={"rgba(0,0,0,0)"}
         bordered
         color="white"
         onClick={() => modalOnClick(true)}
       >
         {parse(t("credit"))}
-      </PPButton>
+      </CreditButton>
 
       <CenteredModal
         show={modalShow}

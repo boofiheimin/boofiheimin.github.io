@@ -1,3 +1,3 @@
-import PPresentationContainer from "./PPresentation";
+import PPresentationContainer from "./PPresentationContainer";
 
 export default PPresentationContainer;

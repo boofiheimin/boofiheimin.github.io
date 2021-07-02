@@ -11,8 +11,7 @@ const PPCongratsContainer = ({ t }) => {
 
   useEffect(() => {
     if (isMobile) {
-      const DOMNode = congratRef.current;
-      DOMNode.style.backgroundAttachment = "scroll";
+      congratRef.current.style.backgroundAttachment = "scroll";
     }
   });
 

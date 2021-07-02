@@ -1,3 +1,3 @@
-import PPCongratsContainer from "./PPCongrats";
+import PPCongratsContainer from "./PPCongratsContainer";
 
 export default PPCongratsContainer;
