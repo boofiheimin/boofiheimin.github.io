@@ -10,6 +10,7 @@ const PPLoaderWrapper = styled.div`
 const PPLoaderContainer = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: white;
   position: relative;
   display: flex;
   justify-content: center;

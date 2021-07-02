@@ -15,7 +15,7 @@ import img5 from "../../assets/images/yuuhidora_rc.png";
 import img6 from "../../assets/images/yuuhidora_center.png";
 
 const MainWrapper = ({ t }) => {
-  const [showLoading, setShowLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [shouldRender, setRender] = useState(false);
 
   useEffect(() => {
@@ -36,19 +36,20 @@ const MainWrapper = ({ t }) => {
         );
       });
       await Promise.all(promises);
-      setRender(true);
+      console.log("finish loading!");
+      setLoading(false);
     };
     loadImages();
   }, []);
 
   const onLoaded = () => {
-    setShowLoading(false);
+    setRender(true);
   };
 
   return (
     <MainWrapperContainer>
-      <PPLoader show={showLoading} />
-      {shouldRender && <Main t={t} onLoaded={onLoaded} />}
+      <PPLoader show={loading || !shouldRender} />
+      <Main t={t} onLoaded={onLoaded} />
     </MainWrapperContainer>
   );
 };
