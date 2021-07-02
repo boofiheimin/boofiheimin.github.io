@@ -53,8 +53,6 @@ class MessageBoard extends Component {
       DOMNode.style.backgroundAttachment = "scroll";
     }
 
-    console.log(GOOGLE_API_KEY);
-
     doc.useApiKey(GOOGLE_API_KEY);
 
     // loads document properties and worksheets

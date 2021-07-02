@@ -1,19 +1,8 @@
-import styled from "styled-components";
 import { Dropdown } from "semantic-ui-react";
-import i18n from "../../i18n";
 
-import PPButton from "../PPButton";
+import PPButton from "../../../PPButton";
 
-const languageOptions = {
-  en: "EN",
-  ja: "日本",
-};
-
-const valueWithDefault = (value) => {
-  if (value in languageOptions) {
-    return value;
-  } else return "en";
-};
+import { languageOptions } from "../../../../i18n";
 
 const options = Object.entries(languageOptions).map(([id, name]) => ({
   key: id,
@@ -22,10 +11,7 @@ const options = Object.entries(languageOptions).map(([id, name]) => ({
   image: { src: `/${id}.png` },
 }));
 
-const PPLingo = () => {
-  const handleLanguageChange = (e, { value }) => {
-    i18n.changeLanguage(value);
-  };
+const PPLingo = ({ handleLanguageChange, currentLanguage }) => {
   return (
     <Dropdown
       className="pplingo"
@@ -35,7 +21,7 @@ const PPLingo = () => {
       color="white"
       labeled
       options={options}
-      value={valueWithDefault(i18n.language)}
+      value={currentLanguage}
       onChange={handleLanguageChange}
     />
   );

@@ -1,17 +1,17 @@
-import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { Divider } from "semantic-ui-react";
-
-import PPButton from "../PPButton";
-
-import { COLOR } from "../../constants";
 import parse from "html-react-parser";
 
+import PPButton from "../../../PPButton";
+
+import { COLOR } from "../../../../constants";
+
 const CenteredModal = (props) => {
-  const { t } = props;
+  const { t, ...restProps } = props;
   return (
     <Modal
-      {...props}
+      {...restProps}
+      //  animation={false} //turn this back on if findDOMnode warning triggers you
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -49,9 +49,7 @@ const CenteredModal = (props) => {
   );
 };
 
-const CreditModal = ({ t }) => {
-  const [modalShow, setModalShow] = useState(false);
-
+const CreditModal = ({ t, modalShow, modalOnClick }) => {
   return (
     <>
       <PPButton
@@ -59,14 +57,14 @@ const CreditModal = ({ t }) => {
         backgroundColor={"rgba(0,0,0,0)"}
         bordered
         color="white"
-        onClick={() => setModalShow(true)}
+        onClick={() => modalOnClick(true)}
       >
         {parse(t("credit"))}
       </PPButton>
 
       <CenteredModal
         show={modalShow}
-        onHide={() => setModalShow(false)}
+        onHide={() => modalOnClick(false)}
         t={t}
       />
     </>
