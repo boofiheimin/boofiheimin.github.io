@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Container, Header, Divider } from "semantic-ui-react";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -81,4 +82,25 @@ const PPMessageBoard = ({
     </MessageBoardContainer>
   );
 };
+
+PPMessageBoard.propTypes = {
+  t: PropTypes.func.isRequired,
+  data: PropTypes.array,
+  hasMore: PropTypes.bool.isRequired,
+  messageRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  downloadRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  fetchMore: PropTypes.func.isRequired,
+  onDownloadClick: PropTypes.func.isRequired,
+};
+
+PPMessageBoard.defaultProps = {
+  data: [],
+};
+
 export default PPMessageBoard;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 
@@ -30,6 +31,14 @@ const PPBackToTop = ({ returnToTop, bttRef }) => {
       <Icon name="chevron up" fitted />
     </BackToTopButton>
   );
+};
+
+PPBackToTop.propTypes = {
+  returnToTop: PropTypes.func.isRequired,
+  bttRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };
 
 export default PPBackToTop;

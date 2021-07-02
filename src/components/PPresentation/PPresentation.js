@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 
@@ -102,6 +103,17 @@ const PPresentation = ({
       </div>
     </PPresentationContainer>
   );
+};
+
+PPresentation.propTypes = {
+  t: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  hideSpinner: PropTypes.func.isRequired,
+  downloadRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  onDownloadClick: PropTypes.func.isRequired,
 };
 
 export default PPresentation;
