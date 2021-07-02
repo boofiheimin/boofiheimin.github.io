@@ -23,7 +23,7 @@ const PPCongratsContainer = styled.div`
   background-attachment: fixed;
   color: white;
   text-shadow: 0 0 10px black;
-  /* animation: slideBg 65s infinite; */
+  animation: slideBg 65s infinite;
   animation-timing-function: ease-in-out;
 
   &:before {
