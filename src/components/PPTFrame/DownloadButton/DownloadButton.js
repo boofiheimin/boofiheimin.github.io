@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { isMobile } from "react-device-detect";
 import { Image } from "semantic-ui-react";
+import parse from "html-react-parser";
 
 import PPButton from "../../PPButton";
 
@@ -28,6 +29,7 @@ class DownloadButton extends Component {
   };
 
   render = () => {
+    const { t } = this.props;
     return (
       <div className="download_button_container">
         <PPButton
@@ -39,10 +41,10 @@ class DownloadButton extends Component {
           ref={this.shurikenRef}
         >
           <Image src="/white_shuriken.png" className="download_icon" />
-          Download PPT
+          {parse(t("pptButton"))}
         </PPButton>
         <div className="download_button_description">
-          .PPTX Format, Size: 85MB
+          {parse(t("pptDetail"))}
         </div>
       </div>
     );

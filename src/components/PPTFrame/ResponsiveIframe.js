@@ -1,0 +1,46 @@
+import styled from "styled-components";
+
+const RContainer = styled.div`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%;
+  @media only screen and (max-width: 420px) {
+    padding-top: 68.75%;
+  }
+`;
+
+const RIframe = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+`;
+
+const ResponsiveIframe = ({ hideSpinner }) => {
+  return (
+    <RContainer>
+      <RIframe
+        title="PPT"
+        src="https://onedrive.live.com/embed?cid=9C12431F4CA33E8E&amp;resid=9C12431F4CA33E8E%2129326&amp;authkey=AE5OmX5CpHbITUU&amp;em=2&amp;wdAr=1.7777777777777777"
+        onLoad={hideSpinner}
+      >
+        This is an embedded{" "}
+        <a target="_blank" href="https://office.com" rel="noreferrer">
+          Microsoft Office
+        </a>{" "}
+        presentation, powered by{" "}
+        <a target="_blank" href="https://office.com/webapps" rel="noreferrer">
+          Office
+        </a>
+        .
+      </RIframe>
+    </RContainer>
+  );
+};
+
+export default ResponsiveIframe;

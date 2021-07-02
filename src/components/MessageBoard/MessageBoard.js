@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import { Container, Header, Divider } from "semantic-ui-react";
-import MessageItems from "./MessageItems";
-
+import { isMobile } from "react-device-detect";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import InfiniteScroll from "react-infinite-scroll-component";
+import parse from "html-react-parser";
+
+import MessageItems from "./MessageItems";
 
 import ShurikenSpinner from "../ShurikenSpinner";
-import { isMobile } from "react-device-detect";
 
 import {
   SPREADSHEET_ID,
   SHEET_ID,
-  CLIENT_EMAIL,
-  PRIVATE_KEY,
+  GOOGLE_API_KEY,
   LIMIT,
 } from "../../constants";
+
+import DownloadButton from "./DownloadButton";
 
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
@@ -51,10 +53,9 @@ class MessageBoard extends Component {
       DOMNode.style.backgroundAttachment = "scroll";
     }
 
-    await doc.useServiceAccountAuth({
-      client_email: CLIENT_EMAIL,
-      private_key: PRIVATE_KEY,
-    });
+    console.log(GOOGLE_API_KEY);
+
+    doc.useApiKey(GOOGLE_API_KEY);
 
     // loads document properties and worksheets
     await doc.loadInfo();
@@ -82,20 +83,22 @@ class MessageBoard extends Component {
 
   render = () => {
     const { data, hasMore } = this.state;
+    const { t } = this.props;
     return (
       <div className="message_board_wrapper" ref={this.messageRef}>
         <Container className="message_board">
           <Container className={"message_board_header"}>
             <Header textAlign="center">
               <Header.Content as="h1" className={"message_board_text"}>
-                Messages From Oversea Brothers!
+                {parse(t("messageHeader"))}
               </Header.Content>
               <Divider />
               <Header.Subheader>
-                種レをふぎ展国ぜ就問オテヘサ梁止ざじば賞売真コレ加17月標すどりぎ名定掲ス指失ーに仕演ヒヱ催家ラ若質レセ死創し部辞おど米東イ呼日片透派るドく。飲レカニツ覧破さがへ記望ょ江投ソ惑3制成暴含北め間知どごべ年度ハミチホ掲風チモテ竹事千息曲フり。高ぜ突25稿み車半ぐレ正社むを活上強ヱ京内テヲミナ更新ユウタマ学再が惑40社ユ多週あとンれ集純妊なゆど。
+                {parse(t("messageSubHeader"))}
               </Header.Subheader>
             </Header>
           </Container>
+          <DownloadButton t={t} />
           <InfiniteScroll
             style={{ overflow: "hidden" }}
             dataLength={data.length}

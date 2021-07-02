@@ -6,6 +6,8 @@ import DownloadButton from "./DownloadButton";
 
 import DownloadDescription from "./DownloadDescription";
 
+import ResponsiveIframe from "./ResponsiveIframe";
+
 class PPTFrame extends Component {
   state = {
     loading: true,
@@ -18,37 +20,17 @@ class PPTFrame extends Component {
   };
 
   render() {
+    const { t } = this.props;
     return (
       <div className={"ppt_card"}>
-        <DownloadDescription id="desc_top" data-aos="flip-right" />
+        <DownloadDescription id="desc_top" t={t} />
         <div className={"ppt_frame"} data-aos="flip-left">
           {this.state.loading ? <ShurikenSpinner /> : null}
-          <iframe
-            title="PPT"
-            src="https://onedrive.live.com/embed?cid=9C12431F4CA33E8E&amp;resid=9C12431F4CA33E8E%2129326&amp;authkey=AE5OmX5CpHbITUU&amp;em=2&amp;wdAr=1.7777777777777777"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            onLoad={this.hideSpinner}
-          >
-            This is an embedded{" "}
-            <a target="_blank" href="https://office.com" rel="noreferrer">
-              Microsoft Office
-            </a>{" "}
-            presentation, powered by{" "}
-            <a
-              target="_blank"
-              href="https://office.com/webapps"
-              rel="noreferrer"
-            >
-              Office
-            </a>
-            .
-          </iframe>
+          <ResponsiveIframe hideSpinner={this.hideSpinner} />
         </div>
-        <div className="download_container" data-aos="flip-right">
-          <DownloadDescription id="desc_bottom" />
-          <DownloadButton />
+        <div className="download_container">
+          <DownloadDescription id="desc_bottom" t={t} />
+          <DownloadButton t={t} />
         </div>
         <div className={"congrats_card_more"}>
           <Icon name="angle double down" />

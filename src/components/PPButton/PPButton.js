@@ -8,12 +8,16 @@ const PPButton = styled.button`
   color: ${({ color }) => {
     return color;
   }};
+
+  border: ${({ bordered }) => {
+    return bordered ? "2px solid white" : "none";
+  }};
+
   border-radius: ${({ circular }) => {
     return circular ? "50%" : "0.3rem";
   }};
 
   line-height: 1em;
-  border: none;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {

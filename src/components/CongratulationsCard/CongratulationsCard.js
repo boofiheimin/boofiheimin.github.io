@@ -1,11 +1,30 @@
 /* eslint-disable no-useless-escape */
 import React, { Component } from "react";
-import { Header, Icon, Button } from "semantic-ui-react";
+import { Header, Icon } from "semantic-ui-react";
 import { isMobile } from "react-device-detect";
+import parse from "html-react-parser";
+import styled from "styled-components";
 
 import PPButton from "../PPButton";
+import PPLingo from "../PPLingo";
+
+import CreditModal from "../CreditModal";
 
 import { COLOR } from "../../constants";
+
+const TopButton = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 99;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  img {
+    height: 1.3rem;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+`;
 
 class CongratulationsCard extends Component {
   congratRef = React.createRef();
@@ -18,15 +37,20 @@ class CongratulationsCard extends Component {
   };
 
   render = () => {
+    const { t } = this.props;
     return (
       <div className={"congrats_card"} ref={this.congratRef}>
+        <TopButton>
+          <CreditModal t={t} />
+          <PPLingo />
+        </TopButton>
         <div className={"congrats_card_message_container"}>
           <Header textAlign="left">
             <Header.Content as="h1" className={"congrats_card_message"}>
-              Congrats On 1M&nbsp;!
+              {parse(t("congratsHeader"))}
             </Header.Content>
             <Header.Subheader className={"congrats_card_submessage"}>
-              An Oshio Family community project
+              {parse(t("congratsSubHeader"))}
             </Header.Subheader>
           </Header>
           <div className={"congrats_buttons"}>
@@ -35,38 +59,36 @@ class CongratulationsCard extends Component {
               hoverBackgroundColor={COLOR.youtubeHovered}
               color="white"
               onClick={() => {
-                window.location.href =
-                  "https://www.youtube.com/channel/UCZlDXzGoo7d44bwdNObFacg?sub_confirmation=1";
+                window
+                  .open(
+                    "https://www.youtube.com/channel/UCZlDXzGoo7d44bwdNObFacg?sub_confirmation=1",
+                    "_blank"
+                  )
+                  .focus();
               }}
             >
               <Icon name="youtube" />
-              Subscribe to Kanata
+              {parse(t("youtubeButton"))}
             </PPButton>
             <PPButton
               backgroundColor={COLOR.discord}
               hoverBackgroundColor={COLOR.discordHovered}
               color="white"
               onClick={() => {
-                window.location.href = "https://discord.gg/ppt";
+                window.open("https://discord.gg/ppt", "_blank").focus();
               }}
             >
               <Icon name="discord" />
-              Join the Fan Server
+              {parse(t("discordButton"))}
             </PPButton>
           </div>
           <div className={"congrats_description"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            {parse(t("congratsDescription"))}
           </div>
         </div>
         <div className={"congrats_card_more"}>
           <Icon name="angle double down" />
-          Scroll for more
+          {parse(t("scrollForMore"))}
         </div>
       </div>
     );

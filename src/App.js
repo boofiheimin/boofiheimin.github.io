@@ -1,3 +1,5 @@
+import { withNamespaces } from "react-i18next";
+
 import "./App.css";
 
 import CongratulationsCard from "./components/CongratulationsCard";
@@ -6,16 +8,16 @@ import MessageBoard from "./components/MessageBoard";
 import Footer from "./components/Footer";
 import PPBackToTop from "./components/PPBackToTop";
 
-function App() {
+function App({ t }) {
   return (
     <div className="main_container">
-      <CongratulationsCard />
-      <PPTFrame />
-      <MessageBoard />
+      <CongratulationsCard t={t} />
+      <PPTFrame t={t} />
+      <MessageBoard t={t} />
       <Footer />
       <PPBackToTop />
     </div>
   );
 }
 
-export default App;
+export default withNamespaces()(App);
