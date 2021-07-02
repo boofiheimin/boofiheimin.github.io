@@ -49,106 +49,29 @@ body {
   }
 }
 
-@keyframes slideBg {
-  /* Safari support */
-  0% {
-    background-image: url("./assets/images/hikawa.png");
-  }
-  20% {
-    background-image: url("./assets/images/hikawa.png");
-  }
-  25% {
-    background-image: url("./assets/images/shukonbu.png");
-  }
-  45% {
-    background-image: url("./assets/images/shukonbu.png");
-  }
-  50% {
-    background-image: url("./assets/images/yuuhidora.png");
-  }
-  70% {
-    background-image: url("./assets/images/yuuhidora.png");
-  }
-  75% {
-    background-image: url("./assets/images/shukonbu2.png");
-  }
-  95% {
-    background-image: url("./assets/images/shukonbu2.png");
-  }
-  100% {
-    background-image: url("./assets/images/hikawa.png");
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  @keyframes slideBg {
-    /* Safari support */
-    0% {
-      background-image: url("./assets/images/hikawa.png");
-    }
-    20% {
-      background-image: url("./assets/images/hikawa.png");
-    }
-    25% {
-      background-image: url("./assets/images/shukonbu.png");
-    }
-    45% {
-      background-image: url("./assets/images/shukonbu.png");
-    }
-    50% {
-      background-image: url("./assets/images/yuuhidora_rc.png");
-    }
-    70% {
-      background-image: url("./assets/images/yuuhidora_rc.png");
-    }
-    75% {
-      background-image: url("./assets/images/shukonbu2.png");
-    }
-    95% {
-      background-image: url("./assets/images/shukonbu2.png");
-    }
-    100% {
-      background-image: url("./assets/images/hikawa.png");
-    }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  @keyframes slideBg {
-    /* Safari support */
-    0% {
-      background-image: url("./assets/images/hikawa.png");
-    }
-    20% {
-      background-image: url("./assets/images/hikawa.png");
-    }
-    25% {
-      background-image: url("./assets/images/shukonbu.png");
-    }
-    45% {
-      background-image: url("./assets/images/shukonbu.png");
-    }
-    50% {
-      background-image: url("./assets/images/yuuhidora_center.png");
-    }
-    70% {
-      background-image: url("./assets/images/yuuhidora_center.png");
-    }
-    75% {
-      background-image: url("./assets/images/shukonbu2.png");
-    }
-    95% {
-      background-image: url("./assets/images/shukonbu2.png");
-    }
-    100% {
-      background-image: url("./assets/images/hikawa.png");
-    }
-  }
-}
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
   }
   100% {
     opacity: 0;

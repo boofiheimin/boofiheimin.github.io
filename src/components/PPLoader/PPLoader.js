@@ -3,7 +3,9 @@ import ShurikenSpinner from "../ShurikenSpinner";
 
 const PPLoaderWrapper = styled.div`
   position: absolute;
-  z-index: 10000;
+  z-index: ${({ transitionEnd }) => {
+    return transitionEnd ? 5 : 100;
+  }};
   width: 100%;
 `;
 
@@ -24,10 +26,10 @@ const PPLoaderContainer = styled.div`
   transition: visibility 0s 1s, opacity 1s linear;
 `;
 
-const PPLoader = ({ show }) => {
+const PPLoader = ({ show, transitionEnd, onTransitionEnd }) => {
   return (
-    <PPLoaderWrapper>
-      <PPLoaderContainer show={show}>
+    <PPLoaderWrapper transitionEnd={transitionEnd}>
+      <PPLoaderContainer show={show} onTransitionEnd={onTransitionEnd}>
         <ShurikenSpinner />
       </PPLoaderContainer>
     </PPLoaderWrapper>

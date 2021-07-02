@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 import CornerButtons from "./CornerButtons";
 import CongratulationsBody from "./CongratulationsBody";
 
-import backgroundImg from "../../assets/images/hikawa.png";
+import SlideShow from "./SlideShow";
 
 const PPCongratsContainer = styled.div`
   display: flex;
@@ -15,31 +15,8 @@ const PPCongratsContainer = styled.div`
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  background-color: deepskyblue;
-  background-image: url(${backgroundImg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: white;
   text-shadow: 0 0 10px black;
-  animation: slideBg 30s infinite;
-  animation-timing-function: ease-in-out;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 1) 83%
-    );
-    opacity: 0.6;
-  }
 
   .congrats_card_more {
     color: white;
@@ -61,6 +38,7 @@ const PPCongrats = ({
 }) => {
   return (
     <PPCongratsContainer ref={congratRef}>
+      <SlideShow />
       <CornerButtons
         t={t}
         modalShow={modalShow}
