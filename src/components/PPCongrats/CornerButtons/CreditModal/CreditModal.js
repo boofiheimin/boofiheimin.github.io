@@ -41,6 +41,7 @@ const CenteredModal = (props) => {
       </Modal.Header>
       <Modal.Body>
         <h4> {parse(t("illustrationCredit"))}</h4>
+        {/* prettier-ignore */}
         <p>
           <Word>
             氷川　翔{" "}
