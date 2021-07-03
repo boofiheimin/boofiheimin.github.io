@@ -3,6 +3,7 @@ import { Icon } from "semantic-ui-react";
 import PPButton from "../PPButton";
 
 import ppstage_blur from "../../assets/images/ppstage_blur.png";
+import pp_gori from "../../assets/images/pp_gori.png";
 
 import parse from "html-react-parser";
 
@@ -17,6 +18,7 @@ const FooterContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 40%;
+  position: relative;
 `;
 
 const FooterQuote = styled.div`
@@ -32,6 +34,15 @@ const FooterCredit = styled.div`
 const GithubButton = styled(PPButton)`
   font-size: 1.25rem;
   padding: 1rem 1rem;
+`;
+
+const Gori = styled.img`
+  position: absolute;
+  width: 7rem;
+  height: 4rem;
+  object-fit: cover;
+  object-position: 0% 0%;
+  bottom: 0;
 `;
 
 const Footer = ({ t }) => {
@@ -56,6 +67,7 @@ const Footer = ({ t }) => {
           <Icon name="github" />
         </GithubButton>
       </FooterCredit>
+      <Gori src={pp_gori} alt="gori" />
     </FooterContainer>
   );
 };

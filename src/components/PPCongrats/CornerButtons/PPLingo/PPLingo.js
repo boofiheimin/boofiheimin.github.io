@@ -16,7 +16,7 @@ const PPLingo = ({ handleLanguageChange, currentLanguage }) => {
     <Dropdown
       className="pplingo"
       as={PPButton}
-      backgroundColor={"rgba(0,0,0,0)"}
+      backgroundColor={"rgba(0,0,0,0.1)"}
       bordered
       color="white"
       labeled
