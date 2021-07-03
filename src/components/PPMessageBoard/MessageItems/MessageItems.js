@@ -25,7 +25,7 @@ const modSeq = (a, b) => {
   return (a % b) + 1;
 };
 const breakpoints = {
-  default: 3,
+  default: 5,
   1200: 2,
   700: 1,
 };
@@ -38,7 +38,7 @@ const MessageItems = ({ data }) => {
       columnClassName="my-masonry-grid_column"
     >
       {data.map(({ message, user, image }, i) => (
-        <MessageItemContainer data-aos="fade-up" key={i}>
+        <MessageItemContainer key={i}>
           <Card className={"message_card"} centered>
             <img
               alt="icon"

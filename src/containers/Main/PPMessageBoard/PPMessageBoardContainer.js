@@ -41,6 +41,7 @@ const PPMessageBoardContainer = ({ t }) => {
     if (data.length % LIMIT !== 0) {
       setHasMore(false);
     }
+    await doc.loadInfo();
     sheetRef.current = doc.sheetsById[SHEET_ID];
     const rows = await sheetRef.current.getRows({
       limit: LIMIT,
