@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { isMobile } from "react-device-detect";
 
@@ -22,33 +22,37 @@ const PPMessageBoardContainer = ({ t }) => {
 
   const doc = useMemo(() => new GoogleSpreadsheet(SPREADSHEET_ID), []);
 
+  const fetchRows = useCallback(async () => {
+    await doc.useApiKey(GOOGLE_API_KEY);
+    await doc.loadInfo();
+    sheetRef.current = doc.sheetsById[SHEET_ID];
+    const rows = await sheetRef.current.getRows({ limit: LIMIT, offset: 0 });
+    setData(rows);
+  }, [doc]);
+
   useEffect(() => {
     if (isMobile) {
       messageRef.current.style.backgroundAttachment = "scroll";
     }
-
-    const fetchRows = async () => {
-      await doc.useApiKey(GOOGLE_API_KEY);
-      await doc.loadInfo();
-      sheetRef.current = doc.sheetsById[SHEET_ID];
-      const rows = await sheetRef.current.getRows({ limit: LIMIT, offset: 0 });
-      setData(rows);
-    };
     fetchRows();
-  }, [doc]);
+  }, [fetchRows]);
 
   const fetchMore = async () => {
     if (data.length % LIMIT !== 0) {
       setHasMore(false);
     }
-    await doc.loadInfo();
-    sheetRef.current = doc.sheetsById[SHEET_ID];
-    const rows = await sheetRef.current.getRows({
-      limit: LIMIT,
-      offset: offset + LIMIT,
-    });
-    setOffset(offset + LIMIT);
-    setData([...data, ...rows]);
+
+    if (data.length === 0) {
+      fetchRows();
+    } else {
+      sheetRef.current = doc.sheetsById[SHEET_ID];
+      const rows = await sheetRef.current.getRows({
+        limit: LIMIT,
+        offset: offset + LIMIT,
+      });
+      setOffset(offset + LIMIT);
+      setData([...data, ...rows]);
+    }
   };
 
   const onDownloadClick = () => {

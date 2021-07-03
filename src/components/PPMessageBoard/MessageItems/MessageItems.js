@@ -26,8 +26,9 @@ const modSeq = (a, b) => {
 };
 const breakpoints = {
   default: 5,
-  1200: 2,
-  700: 1,
+  1200: 3,
+  780: 2,
+  450: 1,
 };
 
 const MessageItems = ({ data }) => {

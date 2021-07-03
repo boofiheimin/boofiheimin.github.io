@@ -16,7 +16,6 @@ const MessageBoardContainer = styled.div`
   background-attachment: fixed;
   background-size: 150px;
   background-repeat: repeat;
-  padding-top: 2rem;
   .message_board {
     padding-bottom: 3rem;
   }
