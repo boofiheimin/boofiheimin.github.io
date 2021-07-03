@@ -37,9 +37,12 @@ const CenteredModal = (props) => {
       </Modal.Header>
       <Modal.Body>
         <h4> {parse(t("illustrationCredit"))}</h4>
+        {/* prettier-ignore */}
         <p>
-          Hikawa (@hikawa21), shukonbu (@konbusennin2),NAMCOOo (@NAMCOOo),
-          Yuuhidora (@Yu_Hydra0319)
+          氷川　翔 (<a href="https://twitter.com/hikawa21">@hikawa21</a>),
+          朱昆布 (<a href="https://twitter.com/konbusennin2">@konbusennin2</a>),
+          海鼠 (<a href="https://twitter.com/NAMCOOo">@NAMCOOo</a>),
+          ゆうひどら (<a href="https://twitter.com/Yu_Hydra0319">@Yu_Hydra0319</a>)
         </p>
         <Divider />
         <h4> {parse(t("staffCredit"))}</h4>
