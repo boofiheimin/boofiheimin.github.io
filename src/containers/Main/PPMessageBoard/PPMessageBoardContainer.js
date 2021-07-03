@@ -50,8 +50,12 @@ const PPMessageBoardContainer = ({ t }) => {
         limit: LIMIT,
         offset: offset + LIMIT,
       });
-      setOffset(offset + LIMIT);
-      setData([...data, ...rows]);
+      if (rows.length === 0) {
+        setHasMore(false);
+      } else {
+        setOffset(offset + LIMIT);
+        setData([...data, ...rows]);
+      }
     }
   };
 

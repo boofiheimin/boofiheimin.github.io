@@ -2,7 +2,8 @@ const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const SHEET_ID = process.env.REACT_APP_SHEET_ID;
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
-const LIMIT = parseInt(process.env.REACT_APP_MESSAGE_LIMIT, 10);
+//const LIMIT = parseInt(process.env.REACT_APP_MESSAGE_LIMIT, 10);
+const LIMIT = 50;
 
 const COLOR = {
   powerPoint: "#C43E1C",

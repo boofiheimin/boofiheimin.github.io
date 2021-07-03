@@ -82,7 +82,6 @@ const MessageBoardHeader = ({ t }) => {
         <img src={group1} alt="oversea" />
         <img src={group2} alt="brothers" />
         <img src={group3} alt="message" />
-        {/* <span>{parse(t("messageHeader"))}</span> */}
       </MessageTopHeader>
       <MessageSubHeader>{parse(t("messageSubHeader"))}</MessageSubHeader>
     </MessageBoardHeaderContainer>
