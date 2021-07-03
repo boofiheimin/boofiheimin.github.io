@@ -11,6 +11,7 @@ import img1 from "../../assets/images/1.png";
 import img2 from "../../assets/images/2.png";
 import img3 from "../../assets/images/3.png";
 import img4 from "../../assets/images/4.png";
+import img5 from "../../assets/images/7.png";
 
 const MainWrapper = ({ t }) => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ const MainWrapper = ({ t }) => {
     const loadImages = async () => {
       const promises = [];
       const images = [];
-      const imageSrcList = [img1, img2, img3, img4];
+      const imageSrcList = [img1, img2, img3, img4, img5];
       imageSrcList.forEach((image) => {
         promises.push(
           new Promise((resolve) => {
@@ -54,7 +55,7 @@ const MainWrapper = ({ t }) => {
         transitionEnd={transitionEnd}
         onTransitionEnd={onTransitionEnd}
       />
-      <Main t={t} onLoaded={onLoaded} />
+      {!loading && <Main t={t} onLoaded={onLoaded} />}
     </MainWrapperContainer>
   );
 };

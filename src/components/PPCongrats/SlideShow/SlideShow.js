@@ -5,6 +5,7 @@ import img1 from "../../../assets/images/1.png";
 import img2 from "../../../assets/images/2.png";
 import img3 from "../../../assets/images/3.png";
 import img4 from "../../../assets/images/4.png";
+import img5 from "../../../assets/images/7.png";
 
 const SlideShowContainer = styled.ul`
   position: absolute;
@@ -42,16 +43,16 @@ const BaseSlide = styled.span`
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 64s linear infinite 0s;
+  animation: imageAnimation 40s linear infinite 0s;
   background-size: cover;
   background-position: center;
   background-attachment: ${isMobile ? "scroll" : "fixed"};
 `;
 
 const PicSlide = styled(BaseSlide)`
-  background-image: url(${({ src }) => {
-    return src;
-  }});
+  ${({ src }) => {
+    return `background-image: url(${src});`;
+  }};
   animation-delay: ${({ delay }) => {
     return delay;
   }}s;
@@ -67,13 +68,16 @@ const SlideShow = () => {
         <PicSlide src={img1} delay={0} />
       </li>
       <li>
-        <PicSlide src={img2} delay={16} />
+        <PicSlide src={img2} delay={8} />
       </li>
       <li>
-        <PicSlide src={img3} delay={32} />
+        <PicSlide src={img3} delay={16} />
       </li>
       <li>
-        <PicSlide src={img4} delay={48} bgPos={80} />
+        <PicSlide src={img4} delay={24} bgPos={80} />
+      </li>
+      <li>
+        <PicSlide src={img5} delay={32} />
       </li>
     </SlideShowContainer>
   );

@@ -20,6 +20,10 @@ const CreditCloseButton = styled(PPButton)`
   margin-right: 1rem;
 `;
 
+const Word = styled.div`
+  display: inline-block;
+`;
+
 const CenteredModal = (props) => {
   const { t, ...restProps } = props;
   return (
@@ -39,13 +43,64 @@ const CenteredModal = (props) => {
         <h4> {parse(t("illustrationCredit"))}</h4>
         {/* prettier-ignore */}
         <p>
-          氷川　翔 (<a href="https://twitter.com/hikawa21">@hikawa21</a>),
-          朱昆布 (<a href="https://twitter.com/konbusennin2">@konbusennin2</a>),
-          海鼠 (<a href="https://twitter.com/NAMCOOo">@NAMCOOo</a>),
-          ゆうひどら (<a href="https://twitter.com/Yu_Hydra0319">@Yu_Hydra0319</a>)
+          <Word>
+            氷川　翔{" "}
+            <a
+              href="https://twitter.com/hikawa21"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@hikawa21)
+            </a>
+            ,
+          </Word>
+          <Word>
+            朱昆布{" "}
+            <a
+              href="https://twitter.com/konbusennin2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@konbusennin2)
+            </a>
+            ,
+          </Word>
+          <Word>
+            海鼠{" "}
+            <a
+              href="https://twitter.com/NAMCOOo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@NAMCOOo)
+            </a>
+            ,
+          </Word>
+          <Word>
+            ゆうひどら{" "}
+            <a
+              href="https://twitter.com/Yu_Hydra0319"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@Yu_Hydra0319)
+            </a>
+            ,
+          </Word>
+          <Word>
+            からし{" "}
+            <a
+              href="https://twitter.com/asarikarasi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@asarikarasi)
+            </a>
+            ,
+          </Word>
         </p>
         <Divider />
-        <h4> {parse(t("staffCredit"))}</h4>
+        <h4> {parse(t("teamCredit"))}</h4>
         <p>
           buffy, iH8Ecchi, reon, GEN, reo, Wafuu, Ppang, The Unknown, Keaton,
           Rex55, Agent Sheep 003, CruelN1N1, Third
@@ -70,7 +125,7 @@ const CreditModal = ({ t, modalShow, modalOnClick }) => {
   return (
     <>
       <CreditButton
-        backgroundColor={"rgba(0,0,0,0)"}
+        backgroundColor={"rgba(0,0,0,0.1)"}
         bordered
         color="white"
         onClick={() => modalOnClick(true)}

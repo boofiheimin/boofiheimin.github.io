@@ -6,11 +6,11 @@ const PPLoaderWrapper = styled.div`
   z-index: ${({ transitionEnd }) => {
     return transitionEnd ? 5 : 100;
   }};
-  width: 100%;
+  width: 100vw;
 `;
 
 const PPLoaderContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: white;
   position: relative;
