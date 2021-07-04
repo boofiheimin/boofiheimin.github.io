@@ -34,12 +34,12 @@ const RMessageCard = styled.div`
 `;
 
 const Message = styled.div`
-  padding: 8px 12px;
+  padding: 8px 19px;
   font-size: 1.25rem;
 `;
 
 const User = styled.div`
-  padding: 8px 12px;
+  padding: 8px 19px;
   text-align: right;
   font-style: italic;
 `;

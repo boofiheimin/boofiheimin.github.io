@@ -63,7 +63,7 @@ const DownloadPNGButton = styled.div`
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .download_png_button:hover .download_icon {
+    .download_png_button:hover:not([disabled]) .download_icon {
       animation: loading 1s infinite;
     }
   }
@@ -79,6 +79,7 @@ const DownloadButton = ({ t, downloadRef, onDownloadClick }) => {
         color="white"
         onClick={onDownloadClick}
         ref={downloadRef}
+        disabled
       >
         <Image src="/white_shuriken.png" className="download_icon" />
         {parse(t("pngButton"))}

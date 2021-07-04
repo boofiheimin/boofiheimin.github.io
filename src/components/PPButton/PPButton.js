@@ -20,7 +20,7 @@ const PPButton = styled.button`
   line-height: 1em;
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
+    &:hover:not([disabled]) {
       background-color: ${({ hoverBackgroundColor }) => {
         return hoverBackgroundColor;
       }};
@@ -29,9 +29,14 @@ const PPButton = styled.button`
     }
   }
 
-  &:active {
+  &:active:not([disabled]) {
     box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
     transform: scale(0.98);
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    color: #666666;
   }
 `;
 
