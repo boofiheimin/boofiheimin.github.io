@@ -11,7 +11,8 @@ const CardContainer = styled.div`
 const MessageItemContainer = styled.div`
   width: 300px;
   box-shadow: 3px 3px 6px darkgrey;
-  margin: 15px 0px !important;
+  margin-top: 34px !important;
+  margin-bottom: 5px !important;
   .message_card_image {
     object-fit: cover;
     flex-shrink: 0;
@@ -23,9 +24,9 @@ const MessageItemContainer = styled.div`
 const StickerImage = styled.img`
   position: absolute;
   z-index: 100;
-  top: -14px;
+  top: -26px;
   width: 40px;
-  right: -11px;
+  right: -18px;
   filter: drop-shadow(2px 2px 1px darkgray);
 `;
 

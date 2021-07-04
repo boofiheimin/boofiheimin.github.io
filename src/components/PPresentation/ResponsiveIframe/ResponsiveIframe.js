@@ -40,7 +40,7 @@ const RIframe = styled.iframe`
 const ResponsiveIframe = ({ hideSpinner, loading }) => {
   return (
     <PPTframe>
-      {loading ? <ShurikenSpinner /> : null}
+      {/* {loading ? <ShurikenSpinner /> : null}
       <RContainer data-aos="flip-left">
         <RIframe
           title="PPT"
@@ -57,7 +57,8 @@ const ResponsiveIframe = ({ hideSpinner, loading }) => {
           </a>
           .
         </RIframe>
-      </RContainer>
+      </RContainer> */}
+      COMING SOON
     </PPTframe>
   );
 };

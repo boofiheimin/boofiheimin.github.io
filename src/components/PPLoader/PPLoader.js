@@ -11,6 +11,7 @@ const PPLoaderWrapper = styled.div`
 `;
 
 const PPLoaderContainer = styled.div`
+  overflow: hidden !important;
   width: 100vw;
   height: 100vh;
   background-color: white;
