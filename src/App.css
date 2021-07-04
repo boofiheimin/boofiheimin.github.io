@@ -1,0 +1,84 @@
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "M PLUS 1p" !important;
+  line-break: strict;
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+  overflow-y: inherit !important;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 5px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 10px;
+}
+
+.spinning_shuriken img {
+  animation: loading 1s infinite;
+  animation-iteration-count: 1;
+}
+
+.ww {
+  display: inline-block;
+}
+
+.pplingo {
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px black;
+  padding: 0.5rem 1rem;
+}
+
+@keyframes loading {
+  /* Safari support */
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
