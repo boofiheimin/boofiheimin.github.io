@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.e414f38a.chunk.css",
-    "main.js": "/static/js/main.e9cbb796.chunk.js",
-    "main.js.map": "/static/js/main.e9cbb796.chunk.js.map",
+    "main.js": "/static/js/main.d3a4e641.chunk.js",
+    "main.js.map": "/static/js/main.d3a4e641.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5def6f00.js",
     "runtime-main.js.map": "/static/js/runtime-main.5def6f00.js.map",
     "static/css/2.509be7e0.chunk.css": "/static/css/2.509be7e0.chunk.css",
@@ -14,16 +14,11 @@
     "static/css/2.509be7e0.chunk.css.map": "/static/css/2.509be7e0.chunk.css.map",
     "static/css/main.e414f38a.chunk.css.map": "/static/css/main.e414f38a.chunk.css.map",
     "static/js/2.4905a192.chunk.js.LICENSE.txt": "/static/js/2.4905a192.chunk.js.LICENSE.txt",
-    "static/media/1.7927e352.png": "/static/media/1.7927e352.png",
-    "static/media/1.b3471c06.webp": "/static/media/1.b3471c06.webp",
-    "static/media/2.8e69fa0b.png": "/static/media/2.8e69fa0b.png",
-    "static/media/2.f6c05698.webp": "/static/media/2.f6c05698.webp",
-    "static/media/3.0e6c4da4.webp": "/static/media/3.0e6c4da4.webp",
-    "static/media/3.2803d537.png": "/static/media/3.2803d537.png",
-    "static/media/4.34b02284.png": "/static/media/4.34b02284.png",
-    "static/media/4.c547cc5b.webp": "/static/media/4.c547cc5b.webp",
-    "static/media/7.87f7920a.webp": "/static/media/7.87f7920a.webp",
-    "static/media/7.a2151057.png": "/static/media/7.a2151057.png",
+    "static/media/1.e4080332.jpg": "/static/media/1.e4080332.jpg",
+    "static/media/2.21538a61.jpg": "/static/media/2.21538a61.jpg",
+    "static/media/3.3170021b.jpg": "/static/media/3.3170021b.jpg",
+    "static/media/4.8a5bc8fa.jpg": "/static/media/4.8a5bc8fa.jpg",
+    "static/media/7.1732bb45.jpg": "/static/media/7.1732bb45.jpg",
     "static/media/Group 3.6780c964.webp": "/static/media/Group 3.6780c964.webp",
     "static/media/Group 4_2.06954d56.png": "/static/media/Group 4_2.06954d56.png",
     "static/media/bg2.f6180ecb.webp": "/static/media/bg2.f6180ecb.webp",
@@ -37,6 +32,6 @@
     "static/css/2.509be7e0.chunk.css",
     "static/js/2.4905a192.chunk.js",
     "static/css/main.e414f38a.chunk.css",
-    "static/js/main.e9cbb796.chunk.js"
+    "static/js/main.d3a4e641.chunk.js"
   ]
 }
