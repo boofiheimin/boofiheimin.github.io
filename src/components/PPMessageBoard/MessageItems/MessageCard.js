@@ -52,7 +52,7 @@ const MessageCard = ({ user, message, image, index }) => {
         <StickerImage
           alt="icon"
           className={"message_card_icon"}
-          src={`/icon/pp_${modSeq(index, 10)}.png`}
+          src={`/icon/pp_${modSeq(index, 10)}.webp`}
         />
         <CardContainer>
           {image && (
