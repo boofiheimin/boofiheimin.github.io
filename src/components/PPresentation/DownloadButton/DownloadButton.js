@@ -94,7 +94,7 @@ const DownloadButton = ({ t, downloadRef, onDownloadClick }) => {
         ref={downloadRef}
         disabled
       >
-        <Image src="/white_shuriken.png" className="download_icon" />
+        <Image src="/white_shuriken.webp" className="download_icon" />
         {parse(t("pptButton"))}
       </PPButton>
       <div className="download_button_description">{parse(t("pptDetail"))}</div>

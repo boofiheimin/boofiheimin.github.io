@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-import img1 from "../../../assets/images/1.png";
-import img2 from "../../../assets/images/2.png";
-import img3 from "../../../assets/images/3.png";
-import img4 from "../../../assets/images/4.png";
-import img5 from "../../../assets/images/7.png";
+import img1 from "../../../assets/images/1.webp";
+import img2 from "../../../assets/images/2.webp";
+import img3 from "../../../assets/images/3.webp";
+import img4 from "../../../assets/images/4.webp";
+import img5 from "../../../assets/images/7.webp";
 
 const SlideShowContainer = styled.ul`
   position: absolute;

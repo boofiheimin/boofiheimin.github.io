@@ -8,7 +8,7 @@ const options = Object.entries(languageOptions).map(([id, name]) => ({
   key: id,
   text: name,
   value: id,
-  image: { src: `/${id}.png` },
+  image: { src: `/${id}.webp` },
 }));
 
 const PPLingo = ({ handleLanguageChange, currentLanguage }) => {
