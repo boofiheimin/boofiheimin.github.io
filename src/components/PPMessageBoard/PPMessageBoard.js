@@ -9,7 +9,7 @@ import DownloadButton from "./DownloadButton";
 import MessageItems from "./MessageItems";
 import MessageBoardHeader from "./MessageBoardHeader";
 
-import backgroundImg from "../../assets/images/pptile.png";
+import backgroundImg from "../../assets/images/pptile.webp";
 
 const MessageBoardContainer = styled.div`
   background-image: url(${backgroundImg});

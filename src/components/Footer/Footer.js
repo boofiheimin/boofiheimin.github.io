@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 import PPButton from "../PPButton";
 
-import ppstage_blur from "../../assets/images/ppstage_blur.png";
+import ppstage_blur from "../../assets/images/ppstage_blur.webp";
 import pp_gori from "../../assets/images/pp_gori.png";
 
 import parse from "html-react-parser";

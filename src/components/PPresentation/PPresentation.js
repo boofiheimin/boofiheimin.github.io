@@ -7,7 +7,7 @@ import DownloadButton from "./DownloadButton";
 
 import ResponsiveIframe from "./ResponsiveIframe";
 
-import backgroundImg from "../../assets/images/bg2.jpg";
+import backgroundImg from "../../assets/images/bg2.webp";
 
 const PPresentationContainer = styled.div`
   position: relative;
