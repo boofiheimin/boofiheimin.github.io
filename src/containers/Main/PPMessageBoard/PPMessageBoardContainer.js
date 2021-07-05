@@ -56,7 +56,6 @@ const PPMessageBoardContainer = ({ t }) => {
         setHasMore(false);
       } else {
         setOffset(offset + LIMIT);
-        setTotal(parseInt(rows[0]["Total Messages"]));
         setData([...data, ...rows]);
       }
     }

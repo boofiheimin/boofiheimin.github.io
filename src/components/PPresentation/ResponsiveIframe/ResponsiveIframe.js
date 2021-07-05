@@ -11,6 +11,9 @@ const PPTframe = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
   @media only screen and (max-width: 1100px) {
     width: 100%;
   }
@@ -58,7 +61,8 @@ const ResponsiveIframe = ({ hideSpinner, loading }) => {
           .
         </RIframe>
       </RContainer> */}
-      COMING SOON
+      <span className="ww">COMING</span>
+      <span className="ww">SOON™</span>
     </PPTframe>
   );
 };

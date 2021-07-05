@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ModalImage from "react-modal-image";
 
 const modSeq = (a, b) => {
   return (a % b) + 1;
@@ -56,7 +57,13 @@ const MessageCard = ({ user, message, image, index }) => {
         />
         <CardContainer>
           {image && (
-            <img className="message_card_image" src={image} alt={"akt"} />
+            <ModalImage
+              className="message_card_image"
+              small={image}
+              large={image}
+              hideDownload
+              hideZoom
+            />
           )}
           <Message>{message}</Message>
           <User>{user}</User>

@@ -44,7 +44,7 @@ const CenteredModal = (props) => {
         {/* prettier-ignore */}
         <p>
           <Word>
-            氷川　翔{" "}
+            氷川　翔
             <a
               href="https://twitter.com/hikawa21"
               target="_blank"
@@ -52,10 +52,9 @@ const CenteredModal = (props) => {
             >
               (@hikawa21)
             </a>
-            ,
           </Word>
           <Word>
-            朱昆布{" "}
+            {`, 朱昆布`}
             <a
               href="https://twitter.com/konbusennin2"
               target="_blank"
@@ -63,10 +62,9 @@ const CenteredModal = (props) => {
             >
               (@konbusennin2)
             </a>
-            ,
           </Word>
           <Word>
-            海鼠{" "}
+            {`, 海鼠`}
             <a
               href="https://twitter.com/NAMCOOo"
               target="_blank"
@@ -74,10 +72,9 @@ const CenteredModal = (props) => {
             >
               (@NAMCOOo)
             </a>
-            ,
           </Word>
           <Word>
-            ゆうひどら{" "}
+            {`, ゆうひどら`}
             <a
               href="https://twitter.com/Yu_Hydra0319"
               target="_blank"
@@ -85,10 +82,9 @@ const CenteredModal = (props) => {
             >
               (@Yu_Hydra0319)
             </a>
-            ,
           </Word>
           <Word>
-            からし{" "}
+            {`, からし`}
             <a
               href="https://twitter.com/asarikarasi"
               target="_blank"
@@ -96,14 +92,44 @@ const CenteredModal = (props) => {
             >
               (@asarikarasi)
             </a>
-            ,
+          </Word>
+          <Word>
+            {`, Misa`}
+            <a
+              href="https://twitter.com/Misamisatotomi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@Misamisatotomi)
+            </a>
+          </Word>
+          <Word>
+            {`, みたらしねこ`}
+            <a
+              href="https://twitter.com/mitarashi_neko"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@mitarashi_neko)
+            </a>
           </Word>
         </p>
         <Divider />
         <h4> {parse(t("teamCredit"))}</h4>
         <p>
           buffy, iH8Ecchi, reon, GEN, reo, Wafuu, Ppang, The Unknown, Keaton,
-          Rex55, Agent Sheep 003, CruelN1N1, Third
+          Rex55, Agent Sheep 003, CruelN1N1, Third, Vee
+          <Word>
+            {`, Translator Aki`}
+            <a
+              href="https://twitter.com/TranslatorAki"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (@TranslatorAki)
+            </a>
+            ,
+          </Word>
         </p>
       </Modal.Body>
       <Modal.Footer>

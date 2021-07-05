@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 import parse from "html-react-parser";
 
-import group1 from "../../../assets/images/Group 1.png";
-import group2 from "../../../assets/images/Group 2.png";
 import group3 from "../../../assets/images/Group 3.png";
+import group4 from "../../../assets/images/Group 4_2.png";
 import cloudtile from "../../../assets/images/cloudtile.png";
 
 const MessageBoardHeaderContainer = styled.div`
@@ -25,9 +24,8 @@ const MessageTopHeader = styled.div`
     object-fit: cover;
 
     :not(:last-child) {
-      width: 10rem;
-      margin-right: 1rem;
-      object-position: 0% 100%;
+      width: 16rem;
+      object-position: 0% 118%;
       height: 16rem;
     }
     :last-child {
@@ -37,8 +35,8 @@ const MessageTopHeader = styled.div`
     }
     @media only screen and (max-width: 680px) {
       :not(:last-child) {
-        width: 7rem;
-        margin-right: 0rem;
+        width: 10rem;
+        object-position: 0% 126%;
         height: 11rem;
       }
       :last-child {
@@ -48,8 +46,8 @@ const MessageTopHeader = styled.div`
     }
     @media only screen and (max-width: 425px) {
       :not(:last-child) {
-        width: 5rem;
-        margin-right: 0rem;
+        width: 8rem;
+        object-position: 0% 150%;
       }
       :last-child {
         width: 11rem;
@@ -63,7 +61,11 @@ const MessageSubHeader = styled.div`
   margin-bottom: 2rem;
   font-size: 1rem;
   font-style: italic;
-  width: 40%;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  filter: drop-shadow(2px 2px 1px darkgray);
 `;
 
 const CloudTile = styled.div`
@@ -82,8 +84,7 @@ const MessageBoardHeader = ({ t, total }) => {
     <MessageBoardHeaderContainer>
       <CloudTile />
       <MessageTopHeader>
-        <img src={group1} alt="oversea" />
-        <img src={group2} alt="brothers" />
+        <img src={group4} alt="Heimin" />
         <img src={group3} alt="message" />
       </MessageTopHeader>
       <MessageSubHeader>
