@@ -1,20 +1,18 @@
-//To use this file put it in Main and render this instead. I could do this cleaner but ech.
-// Pass in fullData
 import styled from "styled-components";
 import Masonry from "react-masonry-component";
 
 import MessageCard from "./MessageItems/MessageCard";
 
 import backgroundImg from "../../assets/images/pptile.webp";
-import group3 from "../../assets/images/Group 3.webp";
-import group4 from "../../assets/images/Group 4_2.png";
+import Heimin from "../../assets/images/Heimin.png";
+import Messages from "../../assets/images/Messages.png";
 
 const FlexibleContainer = styled.div`
   background-image: url(${backgroundImg});
   background-attachment: fixed;
   background-size: 150px;
   background-repeat: repeat;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 `;
 
@@ -23,18 +21,17 @@ const MessageTopHeader = styled.div`
   justify-content: center;
   align-items: center;
   text-shadow: 0 0 10px deepskyblue;
+  width: 620px;
+  margin-top: 34px !important;
   img {
     object-fit: cover;
 
     :not(:last-child) {
-      width: 16rem;
-      object-position: 0% 118%;
-      height: 16rem;
+      width: 215px;
+      margin-right: 20px;
     }
     :last-child {
-      width: 23rem;
-      object-position: 0% 102%;
-      height: 12rem;
+      width: 300px;
     }
   }
 `;
@@ -52,8 +49,8 @@ const PPMessageBoardRenderer = ({ data }) => {
         style={{ margin: "0 auto" }}
       >
         <MessageTopHeader>
-          <img src={group4} alt="Heimin" />
-          <img src={group3} alt="message" />
+          <img src={Heimin} alt="Heimin" />
+          <img src={Messages} alt="Messages" />
         </MessageTopHeader>
         {data.map(({ message, user, image }, i) => (
           <MessageCard

@@ -51,15 +51,15 @@ const MainWrapper = ({ t }) => {
   };
 
   return (
-    // <MainWrapperContainer>
-    //   <PPLoader
-    //     show={loading || !shouldRender}
-    //     transitionEnd={transitionEnd}
-    //     onTransitionEnd={onTransitionEnd}
-    //   />
-    //   {!loading && <Main t={t} onLoaded={onLoaded} />}
-    // </MainWrapperContainer>
-    <PPMessageBoardRenderer />
+    <MainWrapperContainer>
+      <PPLoader
+        show={loading || !shouldRender}
+        transitionEnd={transitionEnd}
+        onTransitionEnd={onTransitionEnd}
+      />
+      {!loading && <Main t={t} onLoaded={onLoaded} />}
+    </MainWrapperContainer>
+    // <PPMessageBoardRenderer /> turn this back on for full renderer
   );
 };
 

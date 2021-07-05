@@ -3,12 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { isMobile } from "react-device-detect";
 
-import {
-  SPREADSHEET_ID,
-  SHEET_ID,
-  GOOGLE_API_KEY,
-  LIMIT,
-} from "../../../constants";
+import { SPREADSHEET_ID, SHEET_ID, GOOGLE_API_KEY } from "../../../constants";
 
 const PPMessageBoardRendererContainer = () => {
   const messageRef = useRef(null);
@@ -22,7 +17,7 @@ const PPMessageBoardRendererContainer = () => {
     await doc.useApiKey(GOOGLE_API_KEY);
     await doc.loadInfo();
     sheetRef.current = doc.sheetsById[SHEET_ID];
-    const rows = await sheetRef.current.getRows({ limit: 30, offset: 0 });
+    const rows = await sheetRef.current.getRows({ limit: 40, offset: 0 });
     setData(rows);
   }, [doc]);
 
