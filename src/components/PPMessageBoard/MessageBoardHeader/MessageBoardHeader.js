@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 import parse from "html-react-parser";
 
-import group1 from "../../../assets/images/Group 1.png";
-import group2 from "../../../assets/images/Group 2.png";
-import group3 from "../../../assets/images/Group 3.png";
-import cloudtile from "../../../assets/images/cloudtile.png";
+import group1 from "../../../assets/images/Group 1.webp";
+import group2 from "../../../assets/images/Group 2.webp";
+import group3 from "../../../assets/images/Group 3.webp";
+import cloudtile from "../../../assets/images/cloudtile.webp";
 
 const MessageBoardHeaderContainer = styled.div`
   display: flex;
