@@ -21,6 +21,7 @@ const PPresentationContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-position: 65%;
   .pprsenation_more {
     color: white;
     position: absolute;

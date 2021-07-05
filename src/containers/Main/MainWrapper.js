@@ -7,6 +7,8 @@ import MainWrapperContainer from "../../components/MainWrapperContainer";
 
 import Main from "./Main";
 
+import PPMessageBoardRenderer from "./PPMessageBoardRenderer";
+
 import img1 from "../../assets/images/1.webp";
 import img2 from "../../assets/images/2.webp";
 import img3 from "../../assets/images/3.webp";
@@ -49,14 +51,15 @@ const MainWrapper = ({ t }) => {
   };
 
   return (
-    <MainWrapperContainer>
-      <PPLoader
-        show={loading || !shouldRender}
-        transitionEnd={transitionEnd}
-        onTransitionEnd={onTransitionEnd}
-      />
-      {!loading && <Main t={t} onLoaded={onLoaded} />}
-    </MainWrapperContainer>
+    // <MainWrapperContainer>
+    //   <PPLoader
+    //     show={loading || !shouldRender}
+    //     transitionEnd={transitionEnd}
+    //     onTransitionEnd={onTransitionEnd}
+    //   />
+    //   {!loading && <Main t={t} onLoaded={onLoaded} />}
+    // </MainWrapperContainer>
+    <PPMessageBoardRenderer />
   );
 };
 
