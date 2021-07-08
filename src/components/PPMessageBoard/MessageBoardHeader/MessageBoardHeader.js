@@ -3,7 +3,7 @@ import styled from "styled-components";
 import parse from "html-react-parser";
 
 import group3 from "../../../assets/images/Group 3.webp";
-import group4 from "../../../assets/images/Group 4_2.png";
+import group4 from "../../../assets/images/Group 4_2.webp";
 import cloudtile from "../../../assets/images/cloudtile.webp";
 
 const MessageBoardHeaderContainer = styled.div`
