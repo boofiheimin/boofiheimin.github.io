@@ -28,6 +28,20 @@ const PPMessageBoardContainer = ({ t }) => {
     await doc.loadInfo();
     sheetRef.current = doc.sheetsById[SHEET_ID];
     const rows = await sheetRef.current.getRows({ limit: LIMIT, offset: 0 });
+    const promises = [];
+    // preload image before render
+    rows.forEach(({ image }) => {
+      if (image) {
+        promises.push(
+          new Promise((resolve) => {
+            const img = new Image();
+            img.src = image;
+            img.onload = resolve;
+          })
+        );
+      }
+    });
+    await Promise.all(promises);
     setTotal(parseInt(rows[0]["Total Messages"]));
     setData(rows);
   }, [doc]);
@@ -52,6 +66,20 @@ const PPMessageBoardContainer = ({ t }) => {
         limit: LIMIT,
         offset: offset + LIMIT,
       });
+      const promises = [];
+      // preload image before render
+      rows.forEach(({ image }) => {
+        if (image) {
+          promises.push(
+            new Promise((resolve) => {
+              const img = new Image();
+              img.src = image;
+              img.onload = resolve;
+            })
+          );
+        }
+      });
+      await Promise.all(promises);
       if (rows.length === 0) {
         setHasMore(false);
       } else {
