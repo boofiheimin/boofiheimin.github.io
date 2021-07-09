@@ -20,7 +20,7 @@ const PPresentationContainer = styled.div`
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 70%;
   .pprsenation_more {
     color: white;
     position: absolute;
