@@ -38,6 +38,7 @@ const RMessageCard = styled.div`
 const Message = styled.div`
   padding: 8px 19px;
   font-size: 1.25rem;
+  overflow-wrap: break-word;
 `;
 
 const User = styled.div`
