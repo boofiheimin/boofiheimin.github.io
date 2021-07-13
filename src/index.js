@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 
 import "semantic-ui-less/semantic.less";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/js/all";
 
 AOS.init();
 

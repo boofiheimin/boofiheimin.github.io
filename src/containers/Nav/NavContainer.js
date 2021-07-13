@@ -7,7 +7,7 @@ const NavContainer = ({ t }) => {
   const [modalShow, setModalShow] = useState(false);
   const navigate = useNavigate();
   const modalOnClick = (v = false) => {
-    setModalShow(v);
+    navigate("/credit");
   };
 
   const handleLanguageChange = (e, { value }) => {
