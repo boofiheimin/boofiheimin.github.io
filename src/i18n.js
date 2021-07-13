@@ -14,9 +14,7 @@ i18n
   .use(reactI18nextModule)
   .init({
     fallbackLng: "en",
-
     keySeparator: false,
-
     interpolation: {
       escapeValue: false,
     },

@@ -1,11 +1,10 @@
-import { withNamespaces } from "react-i18next";
-
-import PPLoader from "./PPLoader";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
+import { useNavigate } from "react-router";
 
 import MainWrapperContainer from "../../components/MainWrapperContainer";
 
 import Main from "./Main";
+import PPLoader from "./PPLoader";
 
 import img1 from "../../assets/images/1.webp";
 import img2 from "../../assets/images/2.webp";
@@ -13,12 +12,16 @@ import img3 from "../../assets/images/3.webp";
 import img4 from "../../assets/images/4.webp";
 import img5 from "../../assets/images/7.webp";
 
-const MainWrapper = ({ t }) => {
+import i18n from "../../i18n";
+
+const MainWrapper = ({ t, locale }) => {
   const [loading, setLoading] = useState(true);
   const [shouldRender, setRender] = useState(false);
   const [transitionEnd, setTransition] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("what");
     const loadImages = async () => {
       const promises = [];
       const images = [];
@@ -37,6 +40,25 @@ const MainWrapper = ({ t }) => {
       await Promise.all(promises);
       setLoading(false);
     };
+    const reroute = () => {
+      const lang = localStorage.getItem("i18nextLng");
+      if (!locale) {
+        if (lang === "ja") {
+          navigate("/jp");
+        } else {
+          navigate("/en");
+        }
+      }
+    };
+    const setLang = () => {
+      if (locale === "jp") {
+        i18n.changeLanguage("ja");
+      } else {
+        i18n.changeLanguage("en");
+      }
+    };
+    reroute();
+    setLang();
     loadImages();
   }, []);
 
@@ -55,9 +77,9 @@ const MainWrapper = ({ t }) => {
         transitionEnd={transitionEnd}
         onTransitionEnd={onTransitionEnd}
       />
-      {!loading && <Main t={t} onLoaded={onLoaded} />}
+      {!loading && <Main t={t} onLoaded={onLoaded} locale={locale} />}
     </MainWrapperContainer>
   );
 };
 
-export default withNamespaces()(MainWrapper);
+export default MainWrapper;

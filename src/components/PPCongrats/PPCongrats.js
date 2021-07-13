@@ -3,7 +3,6 @@ import { Icon } from "semantic-ui-react";
 import styled from "styled-components";
 import parse from "html-react-parser";
 
-import CornerButtons from "./CornerButtons";
 import CongratulationsBody from "./CongratulationsBody";
 
 import SlideShow from "./SlideShow";
@@ -28,24 +27,10 @@ const PPCongratsContainer = styled.div`
   }
 `;
 
-const PPCongrats = ({
-  t,
-  congratRef,
-  modalShow,
-  modalOnClick,
-  handleLanguageChange,
-  currentLanguage,
-}) => {
+const PPCongrats = ({ t, congratRef }) => {
   return (
     <PPCongratsContainer ref={congratRef}>
       <SlideShow />
-      <CornerButtons
-        t={t}
-        modalShow={modalShow}
-        modalOnClick={modalOnClick}
-        handleLanguageChange={handleLanguageChange}
-        currentLanguage={currentLanguage}
-      />
       <CongratulationsBody t={t} />
       <div className={"congrats_card_more"}>
         <Icon name="angle double down" />
