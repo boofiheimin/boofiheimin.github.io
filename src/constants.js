@@ -123,7 +123,7 @@ const staffCredits = [
   {
     type: "discord",
     name: "GEN",
-    subtitle: "GΞN#2461",
+    subtitle: "#2461",
   },
   {
     type: "discord",
@@ -180,9 +180,12 @@ const staffCredits = [
       "https://pbs.twimg.com/profile_images/1414186098134175744/5a9vpwcS_400x400.jpg",
   },
   {
-    type: "discord",
+    type: "twitter",
     name: "Darrick966",
-    subtitle: "#3770",
+    subtitle: "@Darrick966",
+    link: "https://twitter.com/Darrick966",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1351096737042227203/j-vk8m1u_400x400.jpg",
   },
   {
     type: "discord",
