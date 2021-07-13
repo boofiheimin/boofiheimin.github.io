@@ -48,7 +48,8 @@
     "test": "craco test",
     "eject": "craco eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "fdeploy": "npm run build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [

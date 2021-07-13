@@ -1,3 +1,5 @@
+import ppangava from "./assets/images/ppangavatar.png";
+
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const SHEET_ID = process.env.REACT_APP_SHEET_ID;
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
@@ -80,6 +82,8 @@ const staffCredits = [
     name: "buffy",
     subtitle: "",
     link: "https://github.com/boofiheimin",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1354468890265276418/nKK6t0Eq_400x400.jpg",
   },
   {
     type: "discord",
@@ -95,6 +99,7 @@ const staffCredits = [
     type: "discord",
     name: "ppang",
     subtitle: "",
+    avatar: ppangava,
   },
   {
     type: "discord",
