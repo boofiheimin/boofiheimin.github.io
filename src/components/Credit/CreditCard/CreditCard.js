@@ -25,6 +25,16 @@ const typeReducer = (type) => {
         name: "fab fa-youtube",
         color: "#c4302b",
       };
+    case "reddit":
+      return {
+        name: "fab fa-reddit",
+        color: "#FF5700",
+      };
+    case "facebook":
+      return {
+        name: "fab fa-facebook",
+        color: "#3b5998 ",
+      };
     default:
       return {
         name: "fab fa-twitter",
@@ -33,8 +43,8 @@ const typeReducer = (type) => {
   }
 };
 
-const CreditCard = ({ illustrator, handleCardClick }) => {
-  const { name, subtitle, link = null, avatar = shabani, type } = illustrator;
+const CreditCard = ({ target, handleCardClick }) => {
+  const { name, subtitle, link = null, avatar = shabani, type } = target;
   const reducedType = typeReducer(type);
   const classes = useStyles({ color: reducedType.color });
 

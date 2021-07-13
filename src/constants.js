@@ -1,4 +1,5 @@
 import reon from "./assets/images/reon.png";
+import vee from "./assets/images/vee.png";
 
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const SHEET_ID = process.env.REACT_APP_SHEET_ID;
@@ -86,9 +87,11 @@ const staffCredits = [
       "https://pbs.twimg.com/profile_images/1354468890265276418/nKK6t0Eq_400x400.jpg",
   },
   {
-    type: "discord",
+    type: "youtube",
     name: "iH8Ecchi",
-    subtitle: "iH8Ecchi#2778",
+    link: "https://youtu.be/vuq8eIvLgwk",
+    avatar:
+      "https://yt3.ggpht.com/ytc/AKedOLRnkFLan5pgv7yLahYGSYz0h5c8YU1FGv5YhUj8=s88-c-k-c0x00ffffff-no-rj",
   },
   {
     type: "discord",
@@ -107,7 +110,7 @@ const staffCredits = [
   {
     type: "discord",
     name: "Wafuu",
-    subtitle: "Wafuu#8008",
+    subtitle: "#8008",
   },
   {
     type: "twitter",
@@ -125,7 +128,7 @@ const staffCredits = [
   {
     type: "discord",
     name: "The Unknown",
-    subtitle: "The Unknown#9439",
+    subtitle: "#9439",
   },
   {
     type: "twitter",
@@ -144,14 +147,14 @@ const staffCredits = [
       "https://pbs.twimg.com/profile_images/1269095250993090560/8RlAeNA__400x400.jpg",
   },
   {
-    type: "discord",
+    type: "reddit",
     name: "tabloomoo",
-    subtitle: "tabloomoo#5380",
+    link: "https://www.reddit.com/user/tabloomoo",
   },
   {
     type: "discord",
     name: "CruelN1N1",
-    subtitle: "CruelN1N1#7975",
+    subtitle: "#7975",
   },
   {
     type: "twitter",
@@ -166,6 +169,7 @@ const staffCredits = [
     name: "Vee",
     subtitle: "@DoctorEevee",
     link: "https://twitter.com/DoctorEevee",
+    avatar: vee,
   },
   {
     type: "twitter",
@@ -174,6 +178,47 @@ const staffCredits = [
     link: "https://twitter.com/menyakanataso",
     avatar:
       "https://pbs.twimg.com/profile_images/1414186098134175744/5a9vpwcS_400x400.jpg",
+  },
+  {
+    type: "discord",
+    name: "Darrick966",
+    subtitle: "#3770",
+  },
+  {
+    type: "discord",
+    name: "kenshiro kosuke",
+    subtitle: "#4992",
+  },
+];
+
+const groupCredits = [
+  {
+    type: "discord",
+    name: "Oshio Family Discord",
+    link: "https://discord.gg/ppt",
+    avatar:
+      "https://cdn.discordapp.com/icons/712808142638940182/a_31c7eb87563d5be7758fad75a1713cd1.png?size=128",
+  },
+  {
+    type: "reddit",
+    name: "Hololive Subreddit",
+    link: "https://www.reddit.com/r/Hololive/",
+    avatar:
+      "https://styles.redditmedia.com/t5_29numb/styles/communityIcon_mteajwr3czn41.png?width=256&s=3bff9b841f14bd94b3c1467ffa32747580725c16",
+  },
+  {
+    type: "facebook",
+    name: "PPTYakkai",
+    link: "https://www.facebook.com/PPTYakkai/",
+    avatar:
+      "https://scontent.fbkk2-7.fna.fbcdn.net/v/t1.6435-9/194836102_311189213882554_2110712698402000993_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeFk5qpTVS_BHFRUpQHWSHLLeoJVsFwwjNx6glWwXDCM3FKpu5t9MbhwXncnMJPg_4c&_nc_ohc=ijGwwBk59TEAX88_ndj&_nc_ht=scontent.fbkk2-7.fna&oh=c87a950efa50978c3f47162b896c6703&oe=60F2F879",
+  },
+  {
+    type: "facebook",
+    name: "Kanata Posting from Heaven Academy",
+    link: "https://www.facebook.com/PPTenshiSquad/",
+    avatar:
+      "https://scontent.fbkk2-5.fna.fbcdn.net/v/t1.6435-9/90203640_102727381358763_5376968299160535040_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHZ9zL9YeoMx-2UQFSdanQquI31HOg1Czm4jfUc6DULOXO4wwgRXzv1VIDvLDU1PyM&_nc_ohc=j4iA6D41JdAAX9Z7w9R&_nc_ht=scontent.fbkk2-5.fna&oh=036829894f6ee70d48c0a32eb2a275b8&oe=60F37FAB",
   },
 ];
 
@@ -185,4 +230,5 @@ export {
   COLOR,
   illustratorCredits,
   staffCredits,
+  groupCredits,
 };

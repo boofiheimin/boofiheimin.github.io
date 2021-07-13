@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "250px",
+    minWidth: "300px",
   },
   media: {
     height: "50px",
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 25,
   }),
   container: {
-    display: "Flex",
+    display: "flex",
     alignItems: "center",
     padding: theme.spacing(1),
   },
