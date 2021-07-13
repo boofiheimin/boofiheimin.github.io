@@ -1,4 +1,4 @@
-import ppangava from "./assets/images/ppangavatar.png";
+import reon from "./assets/images/reon.png";
 
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const SHEET_ID = process.env.REACT_APP_SHEET_ID;
@@ -94,12 +94,15 @@ const staffCredits = [
     type: "discord",
     name: "reon",
     subtitle: "",
+    avatar: reon,
   },
   {
-    type: "discord",
-    name: "ppang",
+    type: "youtube",
+    name: "Ppang",
     subtitle: "",
-    avatar: ppangava,
+    avatar:
+      "https://yt3.ggpht.com/ytc/AKedOLTxb1IqdtY5Se0LqxJ0bRo-avWCvIcrUFHwOOFQ=s88-c-k-c0x00ffffff-no-rj",
+    link: "https://www.youtube.com/channel/UCwpLYwcf9wRB-C4gnNlIcog",
   },
   {
     type: "discord",
@@ -111,6 +114,8 @@ const staffCredits = [
     name: "reo",
     subtitle: "@HorsesHh",
     link: "https://twitter.com/HorsesHh",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1385825901804462080/ktO1zQri_400x400.jpg",
   },
   {
     type: "discord",
@@ -127,12 +132,16 @@ const staffCredits = [
     name: "Rex55",
     subtitle: "@RexAstaLevi",
     link: "https://twitter.com/RexAstaLevi",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1394307445757857796/wnGT190B_400x400.jpg",
   },
   {
     type: "twitter",
     name: "Third",
     subtitle: "@third12_",
     link: "https://twitter.com/third12_",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1269095250993090560/8RlAeNA__400x400.jpg",
   },
   {
     type: "discord",
@@ -149,12 +158,22 @@ const staffCredits = [
     name: "Translator Aki",
     subtitle: "@TranslatorAki",
     link: "https://twitter.com/TranslatorAki",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1391163509648420866/VVbXg-eq_400x400.jpg",
   },
   {
     type: "twitter",
     name: "Vee",
     subtitle: "@DoctorEevee",
     link: "https://twitter.com/DoctorEevee",
+  },
+  {
+    type: "twitter",
+    name: "らーめんP",
+    subtitle: "@menyakanataso",
+    link: "https://twitter.com/menyakanataso",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1414186098134175744/5a9vpwcS_400x400.jpg",
   },
 ];
 

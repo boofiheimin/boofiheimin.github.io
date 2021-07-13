@@ -20,6 +20,11 @@ const typeReducer = (type) => {
         name: "fab fa-github",
         color: "#4078c0",
       };
+    case "youtube":
+      return {
+        name: "fab fa-youtube",
+        color: "#c4302b",
+      };
     default:
       return {
         name: "fab fa-twitter",
