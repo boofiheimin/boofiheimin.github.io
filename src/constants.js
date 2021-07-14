@@ -109,9 +109,9 @@ const staffCredits = [
     link: "https://www.youtube.com/channel/UCwpLYwcf9wRB-C4gnNlIcog",
   },
   {
-    type: "discord",
+    type: "youtube",
     name: "Wafuu",
-    subtitle: "#8008",
+    link: "https://www.youtube.com/user/Wafuuchan/",
   },
   {
     type: "twitter",
