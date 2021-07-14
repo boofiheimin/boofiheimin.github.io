@@ -1,5 +1,6 @@
 import reon from "./assets/images/reon.png";
 import vee from "./assets/images/vee.png";
+import jrp from "./assets/images/jrp.jpeg";
 
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const SHEET_ID = process.env.REACT_APP_SHEET_ID;
@@ -191,6 +192,21 @@ const staffCredits = [
     type: "discord",
     name: "kenshiro kosuke",
     subtitle: "#4992",
+  },
+  {
+    type: "twitter",
+    name: "vtange",
+    subtitle: "@vtange",
+    link: "https://twitter.com/vtange",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1188658056877330432/qSoI8GvH_400x400.jpg",
+  },
+  {
+    type: "twitter",
+    name: "Jared Hays",
+    subtitle: "@JRPHays",
+    link: "https://twitter.com/JRPHays",
+    avatar: jrp,
   },
 ];
 

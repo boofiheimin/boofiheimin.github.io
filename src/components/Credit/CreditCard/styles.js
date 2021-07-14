@@ -2,13 +2,14 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: "300px",
+    width: "300px",
   },
   media: {
     height: "50px",
     width: "50px",
     borderRadius: "50px",
     marginRight: theme.spacing(2),
+    flexShrink: 0,
   },
   name: {
     lineHeight: 1,
