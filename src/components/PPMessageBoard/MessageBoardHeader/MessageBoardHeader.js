@@ -30,8 +30,8 @@ const MessageTopHeader = styled.div`
     }
     :last-child {
       width: 23rem;
-      object-position: 0% 102%;
-      height: 12rem;
+      object-position: 0% 121%;
+      height: 16rem;
     }
     @media only screen and (max-width: 680px) {
       :not(:last-child) {
