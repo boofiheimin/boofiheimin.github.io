@@ -21,7 +21,9 @@ const MainWrapper = ({ t, locale }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("what");
+    console.log(
+      "What do you how to find here? close the inspector boy. nothing to see here"
+    );
     const loadImages = async () => {
       const promises = [];
       const images = [];

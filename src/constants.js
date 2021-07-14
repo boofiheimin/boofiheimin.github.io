@@ -203,8 +203,8 @@ const staffCredits = [
   },
   {
     type: "twitter",
-    name: "Jared Hays",
-    subtitle: "@JRPHays",
+    name: "Aurigarion",
+    subtitle: "#7057",
     link: "https://twitter.com/JRPHays",
     avatar: jrp,
   },
