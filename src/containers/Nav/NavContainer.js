@@ -1,12 +1,10 @@
-import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import Nav from "../../components/Nav/Nav";
 import { currentLanguage } from "../../i18n";
 
 const NavContainer = ({ t }) => {
-  const [modalShow, setModalShow] = useState(false);
   const navigate = useNavigate();
-  const modalOnClick = (v = false) => {
+  const onButtonClick = (v = false) => {
     navigate("/credit");
   };
 
@@ -20,8 +18,7 @@ const NavContainer = ({ t }) => {
   return (
     <Nav
       t={t}
-      modalShow={modalShow}
-      modalOnClick={modalOnClick}
+      onButtonClick={onButtonClick}
       handleLanguageChange={handleLanguageChange}
       currentLanguage={currentLanguage()}
     />

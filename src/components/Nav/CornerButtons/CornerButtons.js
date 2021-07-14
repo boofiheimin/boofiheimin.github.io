@@ -19,14 +19,13 @@ const CornerButtonsWrapper = styled.div`
 
 const CornerButtons = ({
   t,
-  modalShow,
-  modalOnClick,
+  onButtonClick,
   handleLanguageChange,
   currentLanguage,
 }) => {
   return (
     <CornerButtonsWrapper>
-      <CreditModal t={t} modalShow={modalShow} modalOnClick={modalOnClick} />
+      <CreditModal t={t} onButtonClick={onButtonClick} />
       <PPLingo
         handleLanguageChange={handleLanguageChange}
         currentLanguage={currentLanguage}

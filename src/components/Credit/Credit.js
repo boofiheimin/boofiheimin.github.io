@@ -12,7 +12,6 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import useStyles from "./styles";
 
 import CreditCard from "./CreditCard/CreditCard";
-import { FormGroup } from "react-bootstrap";
 
 const theme = createTheme({
   typography: {

@@ -46,10 +46,6 @@ PPCongrats.propTypes = {
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   ]).isRequired,
-  modalShow: PropTypes.bool.isRequired,
-  modalOnClick: PropTypes.func.isRequired,
-  handleLanguageChange: PropTypes.func.isRequired,
-  currentLanguage: PropTypes.string.isRequired,
 };
 
 export default PPCongrats;

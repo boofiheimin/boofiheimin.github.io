@@ -47,6 +47,7 @@ const PPMessageBoardContainer = ({ t }) => {
   }, [doc]);
 
   useEffect(() => {
+    console.log("load googlesheet");
     if (isMobile) {
       messageRef.current.style.backgroundAttachment = "scroll";
     }

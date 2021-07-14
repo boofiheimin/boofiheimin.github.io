@@ -17,6 +17,7 @@ const PPMessageBoardContainer = ({ t }) => {
   const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
+    console.log("load csv");
     if (isMobile) {
       messageRef.current.style.backgroundAttachment = "scroll";
     }
