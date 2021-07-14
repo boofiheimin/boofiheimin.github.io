@@ -21,9 +21,7 @@ const MainWrapper = ({ t, locale }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(
-      "What do you how to find here? close the inspector boy. nothing to see here"
-    );
+    console.log("SUBSCRIBE TO AMANE KANATA!!! PLEBIAN!!");
     const loadImages = async () => {
       const promises = [];
       const images = [];

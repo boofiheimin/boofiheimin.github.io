@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import Main from "./containers/Main";
 import Nav from "./containers/Nav";
@@ -8,7 +8,7 @@ import "./App.css";
 
 const App = ({ t }) => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/credit" element={<Credit t={t} />} />
         <Route path="" element={<Nav t={t} />}>
@@ -18,7 +18,7 @@ const App = ({ t }) => {
           <Route path="*" element={<Main t={t} />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
