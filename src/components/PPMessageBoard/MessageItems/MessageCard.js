@@ -68,6 +68,7 @@ const MessageCard = ({ user, message, image, index }) => {
           )}
           <Message>{message}</Message>
           <User>{user}</User>
+          {/* <User>{`${index} ${user}`}</User> */}
         </CardContainer>
       </RMessageCard>
     </MessageItemContainer>
