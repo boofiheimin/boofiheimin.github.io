@@ -17,7 +17,15 @@ const PPMessageBoardRendererContainer = () => {
     await doc.useApiKey(GOOGLE_API_KEY);
     await doc.loadInfo();
     sheetRef.current = doc.sheetsById[SHEET_ID];
-    const rows = await sheetRef.current.getRows({ limit: 40, offset: 0 });
+    const rows = await sheetRef.current.getRows({ limit: 40, offset: 327 });
+    rows.sort((a, b) => {
+      return (
+        b.message.length +
+        b?.image?.length -
+        (a.message.length + a?.image?.length)
+      );
+    });
+
     setData(rows);
   }, [doc]);
 
@@ -28,7 +36,17 @@ const PPMessageBoardRendererContainer = () => {
     fetchRows();
   }, [fetchRows]);
 
-  return <PPMessageBoardRenderer data={data} />;
+  return <PPMessageBoardRenderer data={data} type={4} />;
 };
 
 export default PPMessageBoardRendererContainer;
+
+// 45 0
+// 40 45
+// 35 85
+// 35 120
+// 35 155
+// 40 190
+// 50 240
+// 37 290
+// 40 327

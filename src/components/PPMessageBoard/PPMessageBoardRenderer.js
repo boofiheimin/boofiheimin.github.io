@@ -3,12 +3,37 @@ import Masonry from "react-masonry-component";
 
 import MessageCard from "./MessageItems/MessageCard";
 
-import backgroundImg from "../../assets/images/pptile.webp";
+import pattern1 from "../../assets/images/pptile.webp";
+import pattern2 from "../../assets/images/pattern2.png";
+import pattern3 from "../../assets/images/pattern3.png";
+import pattern4 from "../../assets/images/pattern4.png";
+import pattern5 from "../../assets/images/pattern5.png";
+
 import Heimin from "../../assets/images/Heimin.png";
 import Messages from "../../assets/images/Messages.png";
 
+const messageRenderer = (type) => {
+  switch (type) {
+    case 1:
+      return pattern1;
+    case 2:
+      return pattern2;
+    case 3:
+      return pattern3;
+    case 4:
+      return pattern4;
+    case 5:
+      return pattern5;
+    default:
+      return pattern1;
+  }
+};
+
 const FlexibleContainer = styled.div`
-  background-image: url(${backgroundImg});
+  background-image: url(${({ type }) => {
+    console.log(type);
+    return messageRenderer(type);
+  }});
   background-attachment: fixed;
   background-size: 150px;
   background-repeat: repeat;
@@ -36,9 +61,9 @@ const MessageTopHeader = styled.div`
   }
 `;
 
-const PPMessageBoardRenderer = ({ data }) => {
+const PPMessageBoardRenderer = ({ data, type }) => {
   return (
-    <FlexibleContainer>
+    <FlexibleContainer type={type}>
       <Masonry
         options={{
           gutter: 40,
