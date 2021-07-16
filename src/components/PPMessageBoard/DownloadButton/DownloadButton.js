@@ -79,7 +79,6 @@ const DownloadButton = ({ t, downloadRef, onDownloadClick }) => {
         color="white"
         onClick={onDownloadClick}
         ref={downloadRef}
-        disabled
       >
         <Image src="/white_shuriken.webp" className="download_icon" />
         {parse(t("pngButton"))}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import FileSaver from "file-saver";
 import { isMobile } from "react-device-detect";
 
 import PPMessageBoard from "../../../components/PPMessageBoard";
@@ -80,6 +80,10 @@ const PPMessageBoardContainer = ({ t }) => {
       void downloadRef.current.offsetWidth;
       downloadRef.current.classList.add("spinning_shuriken");
     }
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resource/message_board.zip",
+      "message_board.zip"
+    );
   };
 
   return (

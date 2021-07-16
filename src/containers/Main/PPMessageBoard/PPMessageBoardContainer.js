@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { isMobile } from "react-device-detect";
+import FileSaver from "file-saver";
 
 import PPMessageBoard from "../../../components/PPMessageBoard";
 
@@ -96,6 +97,10 @@ const PPMessageBoardContainer = ({ t }) => {
       void downloadRef.current.offsetWidth;
       downloadRef.current.classList.add("spinning_shuriken");
     }
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resource/message_board.zip",
+      "message_board.zip"
+    );
   };
 
   return (
