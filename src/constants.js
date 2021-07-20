@@ -1,6 +1,7 @@
 import reon from "./assets/images/reon.png";
 import vee from "./assets/images/vee.png";
 import jrp from "./assets/images/jrp.jpeg";
+import gen from "./assets/images/gen.png";
 
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const SHEET_ID = process.env.REACT_APP_SHEET_ID;
@@ -125,6 +126,7 @@ const staffCredits = [
     type: "discord",
     name: "GEN",
     subtitle: "#2461",
+    avatar: gen,
   },
   {
     type: "discord",
@@ -207,6 +209,25 @@ const staffCredits = [
     subtitle: "#7057",
     link: "https://twitter.com/JRPHays",
     avatar: jrp,
+  },
+  {
+    type: "youtube",
+    name: "Felix172",
+    link: "https://www.youtube.com/channel/UCcu2MmRsHNV7IkFZjSCDhIQ",
+    avatar:
+      "https://yt3.ggpht.com/ytc/AKedOLSrf-YzCQAclhaiSEVILn9NlZl0JXclE4CBVFW7=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    type: "youtube",
+    name: "blubsubs v",
+    link: "https://www.youtube.com/channel/UCaDyXwdL4eYDSJnszYeFMZA",
+    avatar:
+      "https://yt3.ggpht.com/ytc/AKedOLRdQxh1vtLVagpUI8VEGsOLHyeT57WhAknHVMqb=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    type: "discord",
+    name: "Snolak",
+    subtitle: "#3058",
   },
 ];
 
