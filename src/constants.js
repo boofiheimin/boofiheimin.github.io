@@ -228,6 +228,8 @@ const staffCredits = [
     type: "discord",
     name: "Snolak",
     subtitle: "#3058",
+    avatar:
+      "https://cdn.discordapp.com/avatars/261908478749048832/7a157207ec7810b789ab7faacc5c1cb8.png?size=128",
   },
 ];
 
