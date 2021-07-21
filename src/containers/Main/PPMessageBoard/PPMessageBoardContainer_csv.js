@@ -28,7 +28,6 @@ const PPMessageBoardContainer = ({ t }) => {
       const decoder = new TextDecoder("utf-8");
       const csv = await decoder.decode(result.value);
       const { data: csvData } = readString(csv, { header: true });
-      csvData.pop();
       setCSV(csvData);
       const rows = csvData.slice(offset, LIMIT);
       const promises = [];
