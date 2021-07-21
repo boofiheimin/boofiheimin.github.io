@@ -3,11 +3,11 @@ import vee from "./assets/images/vee.png";
 import jrp from "./assets/images/jrp.jpeg";
 import gen from "./assets/images/gen.png";
 
-const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
-const SHEET_ID = process.env.REACT_APP_SHEET_ID;
-const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID || "";
+const SHEET_ID = process.env.REACT_APP_SHEET_ID || "";
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY || "";
 
-const LIMIT = parseInt(process.env.REACT_APP_MESSAGE_LIMIT, 10);
+const LIMIT = parseInt(process.env.REACT_APP_MESSAGE_LIMIT, 10) || 20;
 
 const COLOR = {
   powerPoint: "#C43E1C",
