@@ -5,7 +5,7 @@ import { currentLanguage } from "../../i18n";
 const NavContainer = ({ t }) => {
   const navigate = useNavigate();
   const onButtonClick = (v = false) => {
-    navigate("/credit");
+    navigate("/credits");
   };
 
   const handleLanguageChange = (e, { value }) => {

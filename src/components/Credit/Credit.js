@@ -36,7 +36,7 @@ const Credit = ({
               <ArrowBackIcon className={classes.icon} />
             </IconButton>
             <Typography className={classes.creditHeader} variant="h3">
-              Credit
+              Credits
             </Typography>
           </Box>
           <Divider />
