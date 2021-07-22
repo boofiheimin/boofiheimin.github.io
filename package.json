@@ -35,6 +35,7 @@
     "react-masonry-infinite": "^1.2.2",
     "react-modal-image": "^2.5.0",
     "react-papaparse": "^3.16.1",
+    "react-responsive-carousel": "^3.2.20",
     "react-router": "^6.0.0-beta.0",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.3",

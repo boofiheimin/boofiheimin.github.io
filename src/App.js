@@ -4,6 +4,8 @@ import Main from "./containers/Main";
 import Nav from "./containers/Nav";
 import Credit from "./containers/Credit/CreditContainer";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import "./App.css";
 
 const App = ({ t }) => {
