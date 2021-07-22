@@ -2,6 +2,8 @@ import reon from "./assets/images/reon.png";
 import vee from "./assets/images/vee.png";
 import jrp from "./assets/images/jrp.jpeg";
 import gen from "./assets/images/gen.png";
+import unknown from "./assets/images/unknown.png";
+import tabloomoo from "./assets/images/tabloomoo.jpg";
 
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID || "";
 const SHEET_ID = process.env.REACT_APP_SHEET_ID || "";
@@ -132,6 +134,7 @@ const staffCredits = [
     type: "discord",
     name: "The Unknown",
     subtitle: "#9439",
+    avatar: unknown,
   },
   {
     type: "twitter",
@@ -153,6 +156,7 @@ const staffCredits = [
     type: "reddit",
     name: "tabloomoo",
     link: "https://www.reddit.com/user/tabloomoo",
+    avatar: tabloomoo,
   },
   {
     type: "discord",
@@ -236,7 +240,7 @@ const staffCredits = [
 const groupCredits = [
   {
     type: "discord",
-    name: "Oshio Family Discord",
+    name: "Tenkai Academy Discord",
     link: "https://discord.gg/ppt",
     avatar:
       "https://cdn.discordapp.com/icons/712808142638940182/a_31c7eb87563d5be7758fad75a1713cd1.png?size=128",
