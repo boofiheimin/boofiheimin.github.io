@@ -6,13 +6,16 @@ const SpinningShuriken = styled(Image)`
   width: 64px;
   height: 64px;
   position: absolute !important;
-  z-index: 10;
+  z-index: 1000;
 `;
 
-const ShurikenSpinner = () => {
-  return (
-    <SpinningShuriken className="shuriken" src="/blue_shuriken.png" centered />
-  );
+const ShurikenSpinner = ({ type }) => {
+  let shuriken = "/blue_shuriken.png";
+  if (type === "white") {
+    shuriken = "/white_shuriken.webp";
+  }
+
+  return <SpinningShuriken className="shuriken" src={shuriken} centered />;
 };
 
 export default ShurikenSpinner;

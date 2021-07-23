@@ -4,7 +4,8 @@ import Main from "./containers/Main";
 import Nav from "./containers/Nav";
 import Credit from "./containers/Credit/CreditContainer";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import "./App.css";
 
