@@ -1,5 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { Dialog } from "@material-ui/core";
+import { useKonami } from "react-konami-code";
+
 import PPCongrats from "./PPCongrats";
 import PPresentation from "./PPresentation";
 import PPMessageBoard from "./PPMessageBoard/PPMessageBoardContainer";
@@ -9,7 +12,10 @@ import PPShowcase from "./PPShowcase/PPShowcaseContainer";
 import Footer from "../../components/Footer";
 import i18n from "../../i18n";
 
+import kanatowacultsheet from "../../assets/images/kanatowacultsheet.png";
+
 const Main = ({ t, onLoaded, locale }) => {
+  const [easterEgg, setEasterEgg] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     const reroute = () => {
@@ -35,6 +41,12 @@ const Main = ({ t, onLoaded, locale }) => {
     onLoaded();
   }, [locale]);
 
+  useKonami(() => setEasterEgg(true));
+
+  const handleClose = () => {
+    setEasterEgg(false);
+  };
+
   return (
     <div>
       <PPCongrats t={t} />
@@ -47,6 +59,9 @@ const Main = ({ t, onLoaded, locale }) => {
       )}
       <PPBackToTop />
       <Footer t={t} />
+      <Dialog open={easterEgg} onClose={handleClose}>
+        <img src={kanatowacultsheet} alt="knt" />
+      </Dialog>
     </div>
   );
 };
