@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.35d16bbe.chunk.css",
-    "main.js": "/static/js/main.eb16964d.chunk.js",
-    "main.js.map": "/static/js/main.eb16964d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5e1c191c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5e1c191c.js.map",
-    "static/css/2.d7a1713d.chunk.css": "/static/css/2.d7a1713d.chunk.css",
-    "static/js/2.66c1aee4.chunk.js": "/static/js/2.66c1aee4.chunk.js",
-    "static/js/2.66c1aee4.chunk.js.map": "/static/js/2.66c1aee4.chunk.js.map",
-    "static/js/3.1d953f12.chunk.js": "/static/js/3.1d953f12.chunk.js",
-    "static/js/3.1d953f12.chunk.js.map": "/static/js/3.1d953f12.chunk.js.map",
+    "main.js": "/static/js/main.3c82e3a4.chunk.js",
+    "main.js.map": "/static/js/main.3c82e3a4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.00974dbe.js",
+    "runtime-main.js.map": "/static/js/runtime-main.00974dbe.js.map",
+    "static/css/2.079fce33.chunk.css": "/static/css/2.079fce33.chunk.css",
+    "static/js/2.1a6e7cf2.chunk.js": "/static/js/2.1a6e7cf2.chunk.js",
+    "static/js/2.1a6e7cf2.chunk.js.map": "/static/js/2.1a6e7cf2.chunk.js.map",
+    "static/js/3.0459fa33.chunk.js": "/static/js/3.0459fa33.chunk.js",
+    "static/js/3.0459fa33.chunk.js.map": "/static/js/3.0459fa33.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.d7a1713d.chunk.css.map": "/static/css/2.d7a1713d.chunk.css.map",
+    "static/css/2.079fce33.chunk.css.map": "/static/css/2.079fce33.chunk.css.map",
     "static/css/main.35d16bbe.chunk.css.map": "/static/css/main.35d16bbe.chunk.css.map",
-    "static/js/2.66c1aee4.chunk.js.LICENSE.txt": "/static/js/2.66c1aee4.chunk.js.LICENSE.txt",
+    "static/js/2.1a6e7cf2.chunk.js.LICENSE.txt": "/static/js/2.1a6e7cf2.chunk.js.LICENSE.txt",
     "static/media/1.7927e352.png": "/static/media/1.7927e352.png",
     "static/media/1.b3471c06.webp": "/static/media/1.b3471c06.webp",
     "static/media/2.8e69fa0b.png": "/static/media/2.8e69fa0b.png",
@@ -37,15 +37,16 @@
     "static/media/pptile.ae03a9a8.webp": "/static/media/pptile.ae03a9a8.webp",
     "static/media/reon.ac0516f9.png": "/static/media/reon.ac0516f9.png",
     "static/media/shabaniavatar.b03936c5.jpg": "/static/media/shabaniavatar.b03936c5.jpg",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
     "static/media/tabloomoo.0b2de995.jpg": "/static/media/tabloomoo.0b2de995.jpg",
     "static/media/unknown.017a2399.png": "/static/media/unknown.017a2399.png",
     "static/media/vee.0b1cf14e.png": "/static/media/vee.0b1cf14e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5e1c191c.js",
-    "static/css/2.d7a1713d.chunk.css",
-    "static/js/2.66c1aee4.chunk.js",
+    "static/js/runtime-main.00974dbe.js",
+    "static/css/2.079fce33.chunk.css",
+    "static/js/2.1a6e7cf2.chunk.js",
     "static/css/main.35d16bbe.chunk.css",
-    "static/js/main.eb16964d.chunk.js"
+    "static/js/main.3c82e3a4.chunk.js"
   ]
 }
