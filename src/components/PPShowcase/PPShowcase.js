@@ -10,6 +10,7 @@ import Slider from "react-slick";
 import Youtube from "react-youtube";
 
 const ShowCaseContainer = styled.div`
+  position: relative;
   min-height: 100vh;
   width: 100vw;
   background-image: url(${ppstage_blur});
@@ -20,7 +21,7 @@ const ShowCaseContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 4rem;
+  padding: 4rem 4rem 6rem 4rem;
   .slick-dots li button:before {
     color: white;
   }
@@ -152,14 +153,13 @@ const PPShowcase = () => {
     setAutoplay(false);
   };
 
-  const onSlideChange = () => {
+  const onSlideChange = (index) => {
+    players[index].stopVideo();
     if (!autoplay) {
       sliderRef.current.slickPlay();
       setAutoplay(true);
     }
   };
-
-  console.log(players[0] === null);
 
   return (
     <ShowCaseContainer>
@@ -173,7 +173,7 @@ const PPShowcase = () => {
         </SongSubtitle>
 
         <div className="container">
-          <Slider {...settings} ref={sliderRef} afterChange={onSlideChange}>
+          <Slider {...settings} ref={sliderRef} beforeChange={onSlideChange}>
             <div>
               <SlideContainer>
                 {players[0] === null && <ShurikenSpinner type="white" />}
