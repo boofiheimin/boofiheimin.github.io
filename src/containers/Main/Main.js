@@ -12,7 +12,7 @@ import PPShowcase from "./PPShowcase/PPShowcaseContainer";
 import Footer from "../../components/Footer";
 import i18n from "../../i18n";
 
-import kanatowacultsheet from "../../assets/images/kanatowacultsheet.png";
+import kanatowa from "../../assets/images/kanatowa.png";
 
 const Main = ({ t, onLoaded, locale }) => {
   const [easterEgg, setEasterEgg] = useState(false);
@@ -43,6 +43,10 @@ const Main = ({ t, onLoaded, locale }) => {
 
   useKonami(() => setEasterEgg(true));
 
+  const handleOpen = () => {
+    setEasterEgg(true);
+  };
+
   const handleClose = () => {
     setEasterEgg(false);
   };
@@ -58,9 +62,14 @@ const Main = ({ t, onLoaded, locale }) => {
         <PPMessageBoardCSV t={t} />
       )}
       <PPBackToTop />
-      <Footer t={t} />
+      <Footer
+        t={t}
+        onGori={() => {
+          handleOpen();
+        }}
+      />
       <Dialog open={easterEgg} onClose={handleClose}>
-        <img src={kanatowacultsheet} alt="knt" />
+        <img src={kanatowa} alt="knt" />
       </Dialog>
     </div>
   );

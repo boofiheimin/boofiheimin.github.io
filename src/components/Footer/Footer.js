@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 import PPButton from "../PPButton";
@@ -43,9 +44,21 @@ const Gori = styled.img`
   object-fit: cover;
   object-position: 0% 0%;
   bottom: 0;
+  cursor: pointer;
 `;
 
-const Footer = ({ t }) => {
+const Footer = ({ t, onGori }) => {
+  const [goriCounter, setCounter] = useState(0);
+
+  const onGoriClick = () => {
+    if (goriCounter !== 6) {
+      setCounter(goriCounter + 1);
+    } else {
+      onGori();
+      setCounter(0);
+    }
+  };
+
   return (
     <FooterContainer>
       <FooterQuote>{parse(t("footer"))}</FooterQuote>
@@ -67,7 +80,7 @@ const Footer = ({ t }) => {
           <Icon name="github" />
         </GithubButton>
       </FooterCredit>
-      <Gori src={pp_gori} alt="gori" />
+      <Gori src={pp_gori} alt="gori" onClick={onGoriClick} />
     </FooterContainer>
   );
 };
