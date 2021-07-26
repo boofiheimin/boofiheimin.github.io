@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.35d16bbe.chunk.css",
-    "main.js": "/static/js/main.4a78cace.chunk.js",
-    "main.js.map": "/static/js/main.4a78cace.chunk.js.map",
+    "main.js": "/static/js/main.58c2f65a.chunk.js",
+    "main.js.map": "/static/js/main.58c2f65a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c5ac6891.js",
     "runtime-main.js.map": "/static/js/runtime-main.c5ac6891.js.map",
     "static/css/2.079fce33.chunk.css": "/static/css/2.079fce33.chunk.css",
-    "static/js/2.14266303.chunk.js": "/static/js/2.14266303.chunk.js",
-    "static/js/2.14266303.chunk.js.map": "/static/js/2.14266303.chunk.js.map",
+    "static/js/2.270c2cb6.chunk.js": "/static/js/2.270c2cb6.chunk.js",
+    "static/js/2.270c2cb6.chunk.js.map": "/static/js/2.270c2cb6.chunk.js.map",
     "static/js/3.1647df36.chunk.js": "/static/js/3.1647df36.chunk.js",
     "static/js/3.1647df36.chunk.js.map": "/static/js/3.1647df36.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.079fce33.chunk.css.map": "/static/css/2.079fce33.chunk.css.map",
     "static/css/main.35d16bbe.chunk.css.map": "/static/css/main.35d16bbe.chunk.css.map",
-    "static/js/2.14266303.chunk.js.LICENSE.txt": "/static/js/2.14266303.chunk.js.LICENSE.txt",
+    "static/js/2.270c2cb6.chunk.js.LICENSE.txt": "/static/js/2.270c2cb6.chunk.js.LICENSE.txt",
     "static/media/1.7927e352.png": "/static/media/1.7927e352.png",
     "static/media/1.b3471c06.webp": "/static/media/1.b3471c06.webp",
     "static/media/2.8e69fa0b.png": "/static/media/2.8e69fa0b.png",
@@ -35,7 +35,9 @@
     "static/media/jrp.26c47228.jpeg": "/static/media/jrp.26c47228.jpeg",
     "static/media/kanatowa.ef8d6093.png": "/static/media/kanatowa.ef8d6093.png",
     "static/media/ppstage_blur.0595dbe2.webp": "/static/media/ppstage_blur.0595dbe2.webp",
+    "static/media/pptenshisquad.bf78bdb8.jpg": "/static/media/pptenshisquad.bf78bdb8.jpg",
     "static/media/pptile.ae03a9a8.webp": "/static/media/pptile.ae03a9a8.webp",
+    "static/media/pptyakkai.d69430e1.jpg": "/static/media/pptyakkai.d69430e1.jpg",
     "static/media/reon.ac0516f9.png": "/static/media/reon.ac0516f9.png",
     "static/media/shabaniavatar.b03936c5.jpg": "/static/media/shabaniavatar.b03936c5.jpg",
     "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
@@ -46,8 +48,8 @@
   "entrypoints": [
     "static/js/runtime-main.c5ac6891.js",
     "static/css/2.079fce33.chunk.css",
-    "static/js/2.14266303.chunk.js",
+    "static/js/2.270c2cb6.chunk.js",
     "static/css/main.35d16bbe.chunk.css",
-    "static/js/main.4a78cace.chunk.js"
+    "static/js/main.58c2f65a.chunk.js"
   ]
 }
