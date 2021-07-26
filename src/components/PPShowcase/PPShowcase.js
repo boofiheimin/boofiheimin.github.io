@@ -2,12 +2,12 @@ import { useState, useRef } from "react";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 import { Container } from "@material-ui/core";
+import Slider from "react-slick";
+import Youtube from "react-youtube";
+import parse from "html-react-parser";
 import ppstage_blur from "../../assets/images/ppstage_blur.webp";
 
 import ShurikenSpinner from "../ShurikenSpinner";
-
-import Slider from "react-slick";
-import Youtube from "react-youtube";
 
 const ShowCaseContainer = styled.div`
   position: relative;
@@ -137,7 +137,7 @@ const settings = {
   prevArrow: <PrevArrow />,
 };
 
-const PPShowcase = () => {
+const PPShowcase = ({ t }) => {
   const [players, setPlayer] = useState([null, null]);
   const [autoplay, setAutoplay] = useState(true);
   const sliderRef = useRef(null);
@@ -164,13 +164,8 @@ const PPShowcase = () => {
   return (
     <ShowCaseContainer>
       <Container>
-        <SongTitle>Songs</SongTitle>
-        <SongSubtitle>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          perferendis odit cum corrupti quasi, nihil expedita nulla fuga
-          aspernatur voluptas eos. Nisi, eveniet. Temporibus veniam, ut qui
-          aliquid fugit distinctio.
-        </SongSubtitle>
+        <SongTitle> {parse(t("songHeader"))}</SongTitle>
+        <SongSubtitle>{parse(t("songSubtitle"))}</SongSubtitle>
 
         <div className="container">
           <Slider {...settings} ref={sliderRef} beforeChange={onSlideChange}>

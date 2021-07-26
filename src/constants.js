@@ -4,6 +4,8 @@ import jrp from "./assets/images/jrp.jpeg";
 import gen from "./assets/images/gen.png";
 import unknown from "./assets/images/unknown.png";
 import tabloomoo from "./assets/images/tabloomoo.jpg";
+import pptyakkai from "./assets/images/pptyakkai.jpg";
+import pptenshisquad from "./assets/images/pptenshisquad.jpg";
 
 const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID || "";
 const SHEET_ID = process.env.REACT_APP_SHEET_ID || "";
@@ -78,6 +80,14 @@ const illustratorCredits = [
     link: "https://twitter.com/ekuramani",
     avatar:
       "https://pbs.twimg.com/profile_images/975151216496861185/iKyHcB0e_400x400.jpg",
+  },
+  {
+    type: "twitter",
+    name: "あさりからし",
+    subtitle: "@asarikarasi",
+    link: "https://twitter.com/asarikarasi",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1416712001137483778/wi6ovh1E_400x400.jpg",
   },
 ];
 
@@ -235,6 +245,20 @@ const staffCredits = [
     avatar:
       "https://cdn.discordapp.com/avatars/261908478749048832/7a157207ec7810b789ab7faacc5c1cb8.png?size=128",
   },
+  {
+    type: "twitter",
+    name: "Keaton",
+    subtitle: "@LKeaton",
+    link: "https://twitter.com/LKeaton4",
+  },
+  {
+    type: "twitter",
+    name: "フユホタル",
+    subtitle: "@huyuhotaru557",
+    link: "https://twitter.com/huyuhotaru557",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1301045954812899329/QSFQOtTd_400x400.jpg",
+  },
 ];
 
 const groupCredits = [
@@ -256,15 +280,13 @@ const groupCredits = [
     type: "facebook",
     name: "PPTYakkai",
     link: "https://www.facebook.com/PPTYakkai/",
-    avatar:
-      "https://scontent.fbkk2-7.fna.fbcdn.net/v/t1.6435-9/194836102_311189213882554_2110712698402000993_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeFk5qpTVS_BHFRUpQHWSHLLeoJVsFwwjNx6glWwXDCM3FKpu5t9MbhwXncnMJPg_4c&_nc_ohc=ijGwwBk59TEAX88_ndj&_nc_ht=scontent.fbkk2-7.fna&oh=c87a950efa50978c3f47162b896c6703&oe=60F2F879",
+    avatar: pptyakkai,
   },
   {
     type: "facebook",
     name: "Kanata Posting from Heaven Academy",
     link: "https://www.facebook.com/PPTenshiSquad/",
-    avatar:
-      "https://scontent.fbkk2-5.fna.fbcdn.net/v/t1.6435-9/90203640_102727381358763_5376968299160535040_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHZ9zL9YeoMx-2UQFSdanQquI31HOg1Czm4jfUc6DULOXO4wwgRXzv1VIDvLDU1PyM&_nc_ohc=j4iA6D41JdAAX9Z7w9R&_nc_ht=scontent.fbkk2-5.fna&oh=036829894f6ee70d48c0a32eb2a275b8&oe=60F37FAB",
+    avatar: pptenshisquad,
   },
 ];
 
