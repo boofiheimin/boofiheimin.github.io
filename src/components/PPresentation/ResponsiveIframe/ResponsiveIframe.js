@@ -43,26 +43,17 @@ const RIframe = styled.iframe`
 const ResponsiveIframe = ({ hideSpinner, loading }) => {
   return (
     <PPTframe>
-      {/* {loading ? <ShurikenSpinner /> : null}
+      {loading ? <ShurikenSpinner /> : null}
       <RContainer data-aos="flip-left">
         <RIframe
-          title="PPT"
-          src="https://onedrive.live.com/embed?cid=9C12431F4CA33E8E&amp;resid=9C12431F4CA33E8E%2129326&amp;authkey=AE5OmX5CpHbITUU&amp;em=2&amp;wdAr=1.7777777777777777"
+          src="https://www.youtube.com/embed/VDUVNZ72nw4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
           onLoad={hideSpinner}
-        >
-          This is an embedded{" "}
-          <a target="_blank" href="https://office.com" rel="noreferrer">
-            Microsoft Office
-          </a>{" "}
-          presentation, powered by{" "}
-          <a target="_blank" href="https://office.com/webapps" rel="noreferrer">
-            Office
-          </a>
-          .
-        </RIframe>
-      </RContainer> */}
-      <span className="ww">COMING</span>
-      <span className="ww">SOON™</span>
+        ></RIframe>
+      </RContainer>
     </PPTframe>
   );
 };

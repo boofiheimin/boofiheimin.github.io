@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { isMobile } from "react-device-detect";

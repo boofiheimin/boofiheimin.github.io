@@ -1,4 +1,5 @@
-import { useEffect, useState, Suspense } from "react";
+/* eslint-disable no-console */
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
 import MainWrapperContainer from "../../components/MainWrapperContainer";
@@ -6,7 +7,7 @@ import MainWrapperContainer from "../../components/MainWrapperContainer";
 import Main from "./Main";
 import PPLoader from "./PPLoader";
 
-import PPMessageBoardRenderer from "./PPMessageBoardRenderer";
+// import PPMessageBoardRenderer from "./PPMessageBoardRenderer";
 
 import img1 from "../../assets/images/1.webp";
 import img2 from "../../assets/images/2.webp";
@@ -15,6 +16,7 @@ import img4 from "../../assets/images/4.webp";
 import img5 from "../../assets/images/7.webp";
 
 import i18n from "../../i18n";
+import { useCallback } from "react";
 
 const MainWrapper = ({ t, locale }) => {
   const [loading, setLoading] = useState(true);
@@ -62,11 +64,11 @@ const MainWrapper = ({ t, locale }) => {
     reroute();
     setLang();
     loadImages();
-  }, []);
+  }, [locale, navigate]);
 
-  const onLoaded = () => {
+  const onLoaded = useCallback(() => {
     setRender(true);
-  };
+  }, []);
 
   const onTransitionEnd = () => {
     setTransition(true);

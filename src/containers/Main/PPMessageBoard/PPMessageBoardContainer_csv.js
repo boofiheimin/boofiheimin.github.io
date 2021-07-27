@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useEffect, useRef, useState } from "react";
 import FileSaver from "file-saver";
 import { isMobile } from "react-device-detect";
@@ -47,6 +48,7 @@ const PPMessageBoardContainer = ({ t }) => {
       setOffset(LIMIT + offset);
     };
     fetchCSV();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchMore = async () => {

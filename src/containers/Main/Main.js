@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Dialog, makeStyles } from "@material-ui/core";
@@ -99,7 +100,7 @@ const Main = ({ t, onLoaded, locale }) => {
     setLang();
 
     onLoaded();
-  }, [locale]);
+  }, [locale, navigate, onLoaded]);
 
   useKonami(() => setEasterEgg(true));
 
