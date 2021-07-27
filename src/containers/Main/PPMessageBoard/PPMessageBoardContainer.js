@@ -99,7 +99,7 @@ const PPMessageBoardContainer = ({ t }) => {
       downloadRef.current.classList.add("spinning_shuriken");
     }
     FileSaver.saveAs(
-      process.env.PUBLIC_URL + "/resource/msg_boards.zip",
+      process.env.PUBLIC_URL + "/resource/message_board_final.zip",
       "msg_boards.zip"
     );
   };
