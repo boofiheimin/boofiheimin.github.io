@@ -136,7 +136,7 @@ const CongratulationsBody = ({ t }) => {
           hoverBackgroundColor={COLOR.discordHovered}
           color="white"
           onClick={() => {
-            window.open("https://discord.gg/ppt", "_blank").focus();
+            window.open("https://discord.gg/tenkai", "_blank").focus();
           }}
         >
           <Icon name="discord" />
