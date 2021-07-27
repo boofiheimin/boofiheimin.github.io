@@ -24,7 +24,7 @@ const PPMessageBoardRendererContainer = () => {
     await doc.useApiKey(GOOGLE_API_KEY);
     await doc.loadInfo();
     sheetRef.current = doc.sheetsById[SHEET_ID];
-    const rows = await sheetRef.current.getRows({ limit: 25, offset: 411 });
+    const rows = await sheetRef.current.getRows({ limit: 40, offset: 411 });
     // first swap 45 0
     // rows.swap(37, 41);
     // second swap 38 45
