@@ -46,7 +46,7 @@ const ResponsiveIframe = ({ hideSpinner, loading }) => {
       {loading ? <ShurikenSpinner /> : null}
       <RContainer data-aos="flip-left">
         <RIframe
-          src="https://www.youtube.com/embed/VDUVNZ72nw4"
+          src="https://www.youtube.com/embed/C7KFK8GnL0Y"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

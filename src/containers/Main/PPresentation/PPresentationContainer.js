@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import PPresentation from "../../../components/PPresentation";
-//import FileSaver from "file-saver";
+import FileSaver from "file-saver";
 
 const PPresentationContainer = ({ t }) => {
   const [loading, setLoading] = useState(true);
@@ -18,6 +18,10 @@ const PPresentationContainer = ({ t }) => {
       void downloadRef.current.offsetWidth;
       downloadRef.current.classList.add("spinning_shuriken");
     }
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resource/Kanata 1M Journey.pptx",
+      "Kanata 1M Journey.pptx"
+    );
   };
 
   return (
