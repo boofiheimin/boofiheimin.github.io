@@ -24,47 +24,53 @@ const PPMessageBoardRendererContainer = () => {
     await doc.useApiKey(GOOGLE_API_KEY);
     await doc.loadInfo();
     sheetRef.current = doc.sheetsById[SHEET_ID];
-    const rows = await sheetRef.current.getRows({ limit: 40, offset: 325 });
-    // 2 swap
-    // rows.swap(29, 1);
-    // rows.swap(30, 4);
-    // rows.swap(39, 32);
+    const rows = await sheetRef.current.getRows({ limit: 25, offset: 411 });
+    // first swap 45 0
+    // rows.swap(37, 41);
+    // second swap 38 45
+    // rows.swap(29, 2);
+    // rows.swap(30, 14);
     // rows.swap(34, 19);
-    // 3 swap
-    // rows.swap(32, 1);
-    // rows.swap(29, 6);
-    // rows.swap(34, 4);
-    // rows.swap(34, 7);
-    // rows.swap(31, 5);
-    // rows.swap(33, 0);
-    // rows.swap(30, 2);
-    // rows.swap(33, 17);
-    // rows.swap(33, 28);
-    // rows.swap(34, 5);
-    // 4 swap
-    // rows.swap(32, 8);
-    // rows.swap(33, 19);
-    // rows.swap(31, 18);
+    // rows.swap(35, 26);
+    // third swap 35 83
+    // rows.swap(31, 7);
+    // rows.swap(34, 3);
+    // rows.swap(32, 25);
+    // fourth swap 33 118
+    // rows.swap(27, 22);
+    // rows.swap(31, 21);
+    // fifth swap 25 151
+    // rows.swap(21, 18);
+    // rows.swap(11, 9);
+    // sixth swap 25 175
+    // rows.swap(13, 7);
+    // rows.swap(16, 23);
+    // rows.swap(21, 22);
+    // rows.swap(14, 10);
+    // rows.swap(24, 15);
+    // rows.swap(24, 1);
+    // rows.swap(20, 21);
+    // seventh swap 37 200
+    // eitgh swap 50 237
+    // ninth swap 45 287
+    // rows.swap(43, 30);
+    // tenth swap 39 332
+    // rows.swap(35, 26);
+    // rows.swap(38, 3);
     // rows.swap(34, 2);
-    // rows.swap(21, 29);
-    // rows.swap(33, 30);
-    // rows.swap(25, 17);
-    // 5 swap
-    // rows.swap(33, 15);
-    // 6 swap
-    // rows.swap(41, 15);
-    // rows.swap(47, 26);
-    // rows.swap(48, 23);
-    // rows.swap(49, 33);
-    // 7 swap
-    // rows.swap(36, 35);
-    // 8
-    // rows.swap(38, 5);
-    // rows.swap(37, 15);
-    // rows.swap(26, 16);
-    // rows.swap(36, 25);
-    // rows.swap(35, 21);
-    // rows.swap(37, 35);
+    // rows.swap(35, 33);
+    // eleventh swap 40 371
+    rows.swap(15, 10);
+    rows.swap(9, 18);
+    rows.swap(24, 18);
+    rows.swap(23, 20);
+    rows.swap(24, 21);
+    rows.swap(20, 18);
+    rows.swap(24, 9);
+    rows.swap(3, 0);
+    rows.swap(20, 17);
+    // twelve swap 40 411
+
     setData(rows);
   }, [doc]);
 
@@ -75,7 +81,7 @@ const PPMessageBoardRendererContainer = () => {
     fetchRows();
   }, [fetchRows]);
 
-  return <PPMessageBoardRenderer data={data} type={4} />;
+  return <PPMessageBoardRenderer data={data} type={2} />;
 };
 
 export default PPMessageBoardRendererContainer;
